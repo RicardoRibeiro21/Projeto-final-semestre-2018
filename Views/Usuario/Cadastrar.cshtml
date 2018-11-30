@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CheckPoinnt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style-cadastrar.css" />
+    <script src="main.js"></script>
+</head>
+<header>
+</header>
+
+@ViewBag.Mensagem
+<body>
+    <main>
+        <!-- Divisão para cadastrar-->
+        <section id="cadastro">
+            <div class="Cadastrar" id="cadastroScroll">
+                <div class="text-cadastro">
+                    <form autocomplete="off" action="/Usuario/Cadastrar" method="POST" >
+                        <h2><a href="#">Cadastrar</a></h2>
+                        <p>Nome</p>
+                        <input type="text" placeholder="Insira seu nome" name="nome" required="true"> 
+                        <p>Insira o email</p>
+                        <input type="email" placeholder="checkpoint@email.com" name="email" required="true">
+                        <p>Insira a senha</p>
+                        <input type="password" placeholder="********" name="senha" required="true">
+                        <p>Repita a senha</p>
+                        <input type="password" placeholder="********" name="senha" required="true">
+                        <select name="tipo">
+                            <option value ="Usuario">Usuário</option>
+                            <option value ="Administrador">Adiministrador</option>
+                        </select>
+                        <button type="submit" value="Enviar">Cadastrar</button>
+                        <a href="/Usuario/FazerLogin">Fazer Login</a>
+                    </form>
+                </div>
+            </div>
+            <!-- Fim divisão para cadastrar -->
+        </section>
+    </main>
+</body>
+
+</html>

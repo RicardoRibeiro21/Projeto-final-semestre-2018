@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fazer Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/style-fazerLogin.css" />
+    <script src="main.js"></script>
+</head>
+<header>
+</header>
+@ViewBag.Mensagem
+<body>
+    <main>
+        <section id="main">
+            <!-- Divisão para fazer login -->
+            <div class="caixa">
+                <div class="text-login">
+                    <form action="FazerLogin" method="POST">
+                        <h2><a href="#">Fazer Login</a></h2>
+                        <p>Insira o email:</p>
+                        <input type="email" name="email" placeholder="checkpoint@email.com" required="true">
+                        <p>Insira a senha:</p>
+                        <input type="password" name="senha"placeholder="********" required="true">
+                        <!-- <button>Entrar</button> -->
+                        <input class="entrar" type="submit" value="Entrar">
+                        <p>Não possui cadastro? <a href="/Usuario/Cadastrar">Cadastrar</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Fim divisão para fazer login -->
+    </main>
+</body>
+
+</html>

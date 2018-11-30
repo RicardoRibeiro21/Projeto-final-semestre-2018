@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+h2 {
+    text-align: center;
+    padding: 2.6em;
+    width: 100%;
+    height: 20%;
+}
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.banner {
+    justify-content: center;
+    width: 100%;
+    height: 646px;
+    background-image: url("./team.jpg");
+}
+.banner-opacity {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+  
+}
+.logo {
+    width: 100%;
+    height: 55%;
+    transform: scale(0.2);
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    padding: 1.2em;
+    justify-content: flex-end;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.menu ul {
+   display: flex;
+}
+.menu ul li{
+    font-size: 1.5em;
+    list-style-type: none;
+    padding-right: 20px;
+
+
+}
+
+#rodapé {
+    background: cornflowerblue;
+    padding: 1.3em;
+    width: 100%;
+    margin-top: 6%;
+
+}
+.rodape-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 9%;
+}
+#rodapé h3 {
+    font-size: 0.9em;
+    padding: 1.1em;
+
+}
+#rodapé ul {
+    list-style-type: none;
+}
+@media screen and (max-width: 760px) {
+    .banner {
+        height: 400px;
+     }
+    .menu ul {
+         width: 44%;
+     }
+     .menu ul li {
+         padding-right: 4px;
+     }
+    .banner nav {
+       font-size: 0.8em;
+    }
+  
+        .rodape-container{
+            font-size: 0.8em;
+        }
+}
+@media screen and (max-width:480px) {
+    .menu ul {
+        width: 100%;
+        margin-top: -20px;
+        margin-left: 3.8% 
+    }
+    .menu ul li {
+        background-color: rgba(100, 89, 255, 0.151);
+        padding: 1.1em;
+    }
+    .banner {
+        height: 300px;
+    }
+    h2 {
+        font-size: 0.9em;
+    }
+
+}
+.rodape-container{
+    font-size: 0.65em;
+}
+#rodapé h3 {
+    font-size: 1em
+}
