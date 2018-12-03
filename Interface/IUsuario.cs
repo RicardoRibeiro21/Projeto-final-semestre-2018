@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Senai.OO.ProjetoFinal.Models;
-using Senai.OO.ProjetoFinal.Repositorios;
+using Senai.OO.ProjetoFinal.Repositorio;
 namespace Senai.OO.ProjetoFinal.Interface
 {
    
