@@ -67,6 +67,7 @@ a:hover{
 
 
 }
+
 #funcionalidades {
     display:flex;
     width: 100%;
@@ -117,6 +118,7 @@ a:hover{
     justify-content: center;
     align-items: center;
     flex: 1; 
+    margin-bottom: 0;
 }
 .planos-container { 
    width: 75%;
@@ -218,7 +220,100 @@ a:hover{
     border-radius: 10px ;
     font-size: 1.1em;
 }
+/*Sessao css para comentários*/
+#comentarios {
+    margin-top: 0;
+    width: 80%;
+    height: 640px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+.coments img{
+    width: 80%;
+    height: 90%;
+}
+.coment-1 {
+    width: 100%;
+    display: grid;
+    margin-bottom: 0.9em;
+}
+.dataComentario {
+    margin-bottom: 1em;
+}
 
+.grid-1 {
+    grid-template-areas:
+        "img comentarioUsuario comentarioUsuario"
+        "img comentarioUsuario comentarioUsuario"
+        "nomeUsuario comentarioUsuario comentarioUsuario"
+        "dataComentario comentarioUsuario comentarioUsuario"
+        ;
+}
+.coment-2 {
+    width: 20;
+    display: grid;
+}
+
+.grid-2 {
+    grid-template-areas:
+        "img comentarioUsuario comentarioUsuario"
+        "img comentarioUsuario comentarioUsuario"
+        "nomeUsuario comentarioUsuario comentarioUsuario"
+        "dataComentario comentarioUsuario comentarioUsuario"
+        ;
+}
+.botao {
+    width: 20;
+    height: 12%;
+    text-align: center;
+}
+.coments button {
+    margin: 0;
+    border-radius: 1em;
+    width: 10%;
+    height: 50%;
+}
+.cad-coment {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    margin-top: 1.2em;
+}
+.cad-coment img {
+    width: 75%;
+    height: 85%;
+}
+.grid-3 {
+    grid-template-areas:
+    "img coment"
+    "user coment" ;
+    grid-template-columns: 14% 60%;
+    grid-template-rows: 150px 25px;
+    grid-gap: 0px;
+}
+.user {
+    grid-area: user;
+}
+.coment{
+    grid-area: coment;
+}
+.img {
+    grid-area: img;
+}
+.coment {
+    height: 60%;
+    border-radius: 1em;
+    background-color: rgba(123, 171, 235, 0.856); 
+}
+.section-cad-coment {
+    display: flex;
+}
+textarea {
+    padding: 5px;
+}
+/*Fim sessao css para comentários*/
 #sobre {
     /* background: #ff7c7c; */
     width: 100%;
@@ -257,13 +352,13 @@ a:hover{
 
 }
 #sobre img {
-    width: 100%;
+    width: 20;
     /* float: right; */
     padding: 1em;
     margin: -8% 8%;
 }
 .container-sobre {
-    width: 100%;
+    width: 20;
     margin-left: 24px;
 }
 .container-sobre a {
@@ -274,7 +369,7 @@ a:hover{
 #rodapé {
     background: cornflowerblue;
     padding: 1.3em;
-    width: 100%;
+    width: 20;
     margin-top: 6%;
 
 }
@@ -308,7 +403,7 @@ a:hover{
     }
     .topico-img img{
         width: 160%;
-        height: 100%;
+        height: 20;
         margin-right: 5%;
     }
     .topicos {
@@ -390,7 +485,7 @@ a:hover{
 }
 @media screen and (max-width:480px) {
     .menu ul {
-        width: 100%;
+        width: 20;
         margin-top: -20px;
         margin-left: 3.8% 
     }
@@ -409,7 +504,7 @@ a:hover{
     }
     .topico-img img{
         width: 200%;
-        height: 100%;
+        height: 20;
         margin-right: 3%;
     }
     .topicos {
@@ -486,7 +581,7 @@ a:hover{
         font-size: 0.65em;
     }
     .conteudo p {
-        width: 100%;
+        width: 20;
         
 }
      }

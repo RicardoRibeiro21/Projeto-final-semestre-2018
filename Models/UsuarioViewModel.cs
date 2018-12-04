@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Primitives;
-
+using System;
 namespace Senai.OO.ProjetoFinal.Models {
 
     public class UsuarioViewModel {

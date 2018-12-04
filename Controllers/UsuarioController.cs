@@ -50,11 +50,10 @@ namespace Senai.OO.ProjetoFinal.Controllers {
             if (usuario != null) {
                 HttpContext.Session.SetString ("idUsuario", usuario.Id.ToString ());
                 if (usuario.Tipo == "administrador") {
-                    return RedirectToAction ("aprovacao", "Usuario");
+                    return RedirectToAction ("aprovacao", "Comentario");
                 }
-                return RedirectToAction ("index", "Pages");
+                return RedirectToAction ("index", "Comentario");
             }
-
             ViewBag.Mensagem = "Usuário inválido";
             return View ();
         }
