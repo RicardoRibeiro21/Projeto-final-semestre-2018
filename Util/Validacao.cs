@@ -1,3 +1,5 @@
+using Projeto_final_semestre_2018.Repositorios;
+
 namespace Projeto_final_semestre_2018.Util
 {
     public class Validacao
@@ -11,7 +13,7 @@ namespace Projeto_final_semestre_2018.Util
             return false;
         }
         public static bool ValidarUsuario(string email, string senha){
-            if (email.Contains("@checkpoint.org") && senha.Contains("admin") )
+            if (email.Contains("@checkpoint.org") && senha.Contains("admin"))
             {
                 return true;
             }

@@ -111,7 +111,7 @@
                 </ul>
             </div>
         </section>
-        <section id="comentarios">
+        <form id="comentarios" action="/Comentario/Cadastrar" method="POST">
             <div class="coments">
                 <h2>Comentários</h2>
                 <div class="coment-1 grid-1">
@@ -147,13 +147,14 @@
                 <div class="section-cad-coment">
                 <div class="cad-coment grid-3">
                     <img src="./img/Foto de perfil.jpg" class="item img">
-                    <p class="item user">Usuario</p>
-                    <textarea class="item coment"></textarea>
+                    <p class="item user"></p>
+                    <textarea name="coment" class="item coment"></textarea>
                     <input type="submit" value="Enviar">Enviar
                 </div>
+                @ViewBag.Mensagem
             </div>
             </div>
-        </section>
+        </form>
         <section id="sobre">
             <div class="container-sobre">
                 <h2>Sobre a Empresa</h2>

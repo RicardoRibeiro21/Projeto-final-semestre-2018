@@ -6,11 +6,12 @@ using Senai.OO.ProjetoFinal.Models;
 
 namespace Projeto_final_semestre_2018.Repositorios {
     public class UsuarioRepositorio : IUsuario {
-        public UsuarioViewModel BuscarPorId (int id) {
+       
+        public UsuarioViewModel BuscarPorEmail (string email) {
             string[] linhas = System.IO.File.ReadAllLines ("usuarios.csv");
             foreach (var item in linhas) {
                 string[] dados = item.Split (";");
-                if (id.ToString () == dados[0]) {
+                if (email.ToString () == dados[2]) {
                     UsuarioViewModel usuario = new UsuarioViewModel (
                         id: int.Parse (dados[0]),
                         nome: dados[1],
@@ -18,7 +19,6 @@ namespace Projeto_final_semestre_2018.Repositorios {
                         senha: dados[3],
                         tipo: dados[4]
                     );
-
                     return usuario;
                 }
             }
@@ -64,7 +64,6 @@ namespace Projeto_final_semestre_2018.Repositorios {
                             senha: dados[3],
                             tipo: dados[4]
                         );
-
                         return usuario;
                     };
                 }

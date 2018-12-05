@@ -40,7 +40,7 @@ namespace Senai.OO.ProjetoFinal.Interface
         /// <returns></returns>
         UsuarioViewModel FazerLogin (string email, string senha);
 
-        UsuarioViewModel BuscarPorId (int id);
+        UsuarioViewModel BuscarPorEmail (string email);
     }
 }
     
