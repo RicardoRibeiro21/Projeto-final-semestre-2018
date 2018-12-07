@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.IO;
 using Senai.OO.ProjetoFinal.Models;
 
 namespace Senai.OO.ProjetoFinal.Repositorio
@@ -31,5 +32,21 @@ namespace Senai.OO.ProjetoFinal.Repositorio
             }
             return lsComentarios;
         }
+        public ComentarioModel Cadastrar(ComentarioModel comentario){
+            if (File.Exists("comentarios.csv"))
+            {
+                comentario.Id = File.ReadAllLines("comentarios.csv").Length + 1;
+            }
+            else {
+                comentario.Id = 1;
+            }
+            
+             using(StreamWriter sw = new StreamWriter("comentarios.csv", true)){
+                sw.WriteLine($"{comentario.Id};{comentario.Texto};{comentario.DataCriacao};{comentario.Usuario};{comentario.Aprovacao}");
+            }
+
+            return comentario;
+        }
+
     }
 }

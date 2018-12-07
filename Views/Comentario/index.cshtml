@@ -1,3 +1,4 @@
+@using Senai.OO.ProjetoFinal.Models;
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +10,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="/css/style-index.css" />
     <script src="main.js"></script>
 </head>
-
 <body>
     <header>
         <div class="container">
@@ -114,34 +114,14 @@
         <form id="comentarios" action="/Comentario/Cadastrar" method="POST">
             <div class="coments">
                 <h2>Comentários</h2>
+        @foreach (var item in ViewData["Comentarios"] as List<ComentarioModel>){
                 <div class="coment-1 grid-1">
                     <img src="./img/Foto de perfil.jpg" alt="Foto de perfil" class="item img">
-                    <p name="comentarioUsuario" class="item comentarioUsuario">Berserk (ベルセルク, Beruseruku?) é uma série
-                        de mangá escrita e ilustrada por Kentaro Miura. Situado em um mundo de fantasia sombria
-                        inspirado na Europa medieval, a história gira em torno do solitário Guts, um ex-mercenário e
-                        agora um espadachim amaldiçoado e forçado a vagar sem descanso para sobreviver e buscar
-                        vingança, e Griffith, o líder de um bando de mercenários chamado de "Bando do Falcão". Temas de
-                        isolamento, traição, a ilusão do livre-arbítrio, autopreservação, e a questão de se a
-                        humanidade é fundamentalmente boa ou má permeiam a história, explorando o melhor e o pior lado
-                        da natureza humana. Ambos o mangá e o anime são conhecidos pelo o uso de sua violência gráfica
-                        e conteúdo sexual.</p>
+                    <p name="comentarioUsuario" class="item comentarioUsuario">@item.Texto</p>
                     </div> 
-                    <p name="nomeUsuario" class="item nomeUsuario">Ricardo</p>
-                    <p name="dataComentario" class="item dataComentario"> 11/10/2000</p>      
-                <div class="coment-2 grid-2">
-                        <img src="./img/Foto de perfil.jpg" alt="Foto de perfil" class="item img">
-                        <p name="comentarioUsuario" class="item comentarioUsuario">Berserk (ベルセルク, Beruseruku?) é uma série
-                            de mangá escrita e ilustrada por Kentaro Miura. Situado em um mundo de fantasia sombria
-                            inspirado na Europa medieval, a história gira em torno do solitário Guts, um ex-mercenário e
-                            agora um espadachim amaldiçoado e forçado a vagar sem descanso para sobreviver e buscar
-                            vingança, e Griffith, o líder de um bando de mercenários chamado de "Bando do Falcão". Temas de
-                            isolamento, traição, a ilusão do livre-arbítrio, autopreservação, e a questão de se a
-                            humanidade é fundamentalmente boa ou má permeiam a história, explorando o melhor e o pior lado
-                            da natureza humana. Ambos o mangá e o anime são conhecidos pelo o uso de sua violência gráfica
-                            e conteúdo sexual.</p>
-                        </div>
-                        <p name="nomeUsuario" class="item nomeUsuario">Ricardo</p>
-                        <p name="dataComentario" class="item dataComentario"> 11/10/2000</p>      
+                    <p name="nomeUsuario" class="item nomeUsuario">@item.Usuario</p>
+                    <p name="dataComentario" class="item dataComentario"> @item.DataCriacao</p>          
+        }
                 <div class="botao"><button>Exibir mais</button></div>
                 <h3>Nos dê sua opinião sobre os nossos produtos!</h3>
                 <div class="section-cad-coment">
@@ -149,11 +129,12 @@
                     <img src="./img/Foto de perfil.jpg" class="item img">
                     <p class="item user"></p>
                     <textarea name="coment" class="item coment"></textarea>
-                    <input type="submit" value="Enviar">Enviar
+                    <input type="submit" value="Enviar">
                 </div>
-                @ViewBag.Mensagem
+             
             </div>
             </div>
+           @ViewBag.Mensagem
         </form>
         <section id="sobre">
             <div class="container-sobre">

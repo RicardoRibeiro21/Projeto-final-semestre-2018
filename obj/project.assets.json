@@ -11506,11 +11506,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\47575406808\\Desktop\\C#\\Senai.OO.ProjetoFinal\\Senai.OO.ProjetoFinal.csproj",
+      "projectUniqueName": "C:\\Users\\47575406808\\Desktop\\C#\\Senai.OO.ProjetoFinal\\Senai.OO.ProjetoFinal.csproj",
       "projectName": "Senai.OO.ProjetoFinal",
-      "projectPath": "c:\\Users\\47575406808\\Desktop\\C#\\Senai.OO.ProjetoFinal\\Senai.OO.ProjetoFinal.csproj",
+      "projectPath": "C:\\Users\\47575406808\\Desktop\\C#\\Senai.OO.ProjetoFinal\\Senai.OO.ProjetoFinal.csproj",
       "packagesPath": "C:\\Users\\47575406808\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\47575406808\\Desktop\\C#\\Senai.OO.ProjetoFinal\\obj\\",
+      "outputPath": "C:\\Users\\47575406808\\Desktop\\C#\\Senai.OO.ProjetoFinal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

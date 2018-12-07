@@ -10,7 +10,6 @@ namespace Senai.OO.ProjetoFinal.Interface
         /// Lista todos os usuários
         /// </summary>
         /// <returns>Retorna um List<UsuarioViewModel></returns>
-        List<UsuarioViewModel> Listar ();
 
         /// <summary>
         /// Cadastrar um novo usuário

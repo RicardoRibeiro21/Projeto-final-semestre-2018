@@ -224,7 +224,7 @@ a:hover{
 #comentarios {
     margin-top: 0;
     width: 80%;
-    height: 640px;
+    height: 740px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -244,19 +244,6 @@ a:hover{
 }
 
 .grid-1 {
-    grid-template-areas:
-        "img comentarioUsuario comentarioUsuario"
-        "img comentarioUsuario comentarioUsuario"
-        "nomeUsuario comentarioUsuario comentarioUsuario"
-        "dataComentario comentarioUsuario comentarioUsuario"
-        ;
-}
-.coment-2 {
-    width: 20;
-    display: grid;
-}
-
-.grid-2 {
     grid-template-areas:
         "img comentarioUsuario comentarioUsuario"
         "img comentarioUsuario comentarioUsuario"

@@ -18,10 +18,10 @@ namespace Senai.OO.ProjetoFinal.Models
         this.Usuario = usuario;
     }
 
-        public ComentarioModel(string texto, int id)
+        public ComentarioModel(string texto)
         {
             this.Texto = texto;
-            this.Id = id;
+           
         }
     }
 }

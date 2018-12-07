@@ -6,7 +6,7 @@ using Senai.OO.ProjetoFinal.Models;
 
 namespace Projeto_final_semestre_2018.Repositorios {
     public class UsuarioRepositorio : IUsuario {
-       
+
         public UsuarioViewModel BuscarPorEmail (string email) {
             string[] linhas = System.IO.File.ReadAllLines ("usuarios.csv");
             foreach (var item in linhas) {
@@ -40,7 +40,7 @@ namespace Projeto_final_semestre_2018.Repositorios {
 
         public UsuarioViewModel Editar (UsuarioViewModel usuario) {
             //Método extra
-             throw new System.NotImplementedException ();
+            throw new System.NotImplementedException ();
 
         }
         public void Excluir (int id) {
@@ -70,10 +70,6 @@ namespace Projeto_final_semestre_2018.Repositorios {
 
             }
             return null;
-        }
-
-        public List<UsuarioViewModel> Listar () {
-            throw new System.NotImplementedException ();
         }
 
     }
