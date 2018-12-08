@@ -48,7 +48,7 @@ using Senai.OO.ProjetoFinal.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(63, 368, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8bda0041786043f091be2213d3473a48", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d1a2527348c4476d95d0bd53804ef6d7", async() => {
                 BeginContext(69, 355, true);
                 WriteLiteral(@"
     <meta charset=""utf-8"" />
@@ -75,7 +75,7 @@ using Senai.OO.ProjetoFinal.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(433, 2445, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d4025df19dbc4f37bd020016670d8d21", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6c1948b3830c4b31bdbb76fc59200b9e", async() => {
                 BeginContext(439, 1159, true);
                 WriteLiteral(@"
         <header>

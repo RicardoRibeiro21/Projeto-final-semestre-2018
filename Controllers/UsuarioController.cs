@@ -63,7 +63,8 @@ namespace Senai.OO.ProjetoFinal.Controllers {
             UsuarioViewModel usuario = usuarioRepositorio.FazerLogin (form["email"], form["senha"]);
             if (usuario != null) {
                 HttpContext.Session.SetString ("idUsuario", usuario.Id.ToString ());
-                HttpContext.Session.SetString ("idUsuario", usuario.Nome.ToString ());
+                HttpContext.Session.SetString ("nomeUsuario", usuario.Nome.ToString ());
+                HttpContext.Session.SetString ("TipoUsuario", usuario.Tipo.ToString());
                 if (usuario.Tipo == "administrador") {
                     return RedirectToAction ("aprovacao", "Comentario");
                 }

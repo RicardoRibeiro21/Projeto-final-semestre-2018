@@ -9,8 +9,6 @@ using Senai.OO.ProjetoFinal.Repositorio;
 
 namespace Senai.OO.ProjetoFinal.Controllers {
     public class ComentarioController : Controller {
-
-
         [HttpGet]
         public ActionResult Cadastrar () {
             //Verificar se tem alguém logado
@@ -41,11 +39,20 @@ namespace Senai.OO.ProjetoFinal.Controllers {
 
         [HttpGet]
         public ActionResult aprovacao (int id) {
+            if (HttpContext.Session.GetString ("TipoUsuario") == "usuario")
+            {
+                return RedirectToAction ("index", "Comentario");
+            } else
+            {
             ComentarioRepositorio ListaComentario = new ComentarioRepositorio ();
             ViewData["Comentarios"] = ListaComentario.Listar();
-            
             return View ();
+            }
         }
+        // [HttpPost]
+        // public ActionResult aprovacao(IFormCollection form) {
+
+        // }
     
 
         [HttpGet]
