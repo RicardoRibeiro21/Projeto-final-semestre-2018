@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Projeto_final_semestre_2018.Util;
 using Senai.OO.ProjetoFinal.Models;
 using Senai.OO.ProjetoFinal.Repositorio;
 
@@ -22,6 +23,8 @@ namespace Senai.OO.ProjetoFinal.Controllers {
         [HttpPost]
         public ActionResult Cadastrar (IFormCollection form) {
             ComentarioModel comentario = new ComentarioModel (texto: form["coment"]);
+            if (Validacao.ValidarTexto(form["coment"]) == true)
+            {
             comentario.DataCriacao = DateTime.Now;
             //Pegar o Id do Usuário Logado
             comentario.Usuario = HttpContext.Session.GetString ("idUsuario");
@@ -30,6 +33,9 @@ namespace Senai.OO.ProjetoFinal.Controllers {
             comentarioRep.Cadastrar (comentario);
             ViewBag.Mensagem = "Comentário cadastrado, aguarde a aprovação dos administradores";
 
+            } else{
+                // View.
+            }
             return RedirectToAction ("index", "Comentario");
         }
 
@@ -37,15 +43,29 @@ namespace Senai.OO.ProjetoFinal.Controllers {
         public ActionResult aprovacao (int id) {
             ComentarioRepositorio ListaComentario = new ComentarioRepositorio ();
             ViewData["Comentarios"] = ListaComentario.Listar();
+            
             return View ();
         }
+    
+
         [HttpGet]
         public IActionResult index(){
             ComentarioRepositorio ListaComentario = new ComentarioRepositorio ();
             ViewData["Comentarios"] = ListaComentario.Listar();
             return View ();
         }
-
+        [HttpGet]
+        public IActionResult sobre(){
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Contato(){
+            return View();
+        }
+        [HttpGet]
+        public IActionResult perguntas(){
+            return View();
+        }
         [HttpGet]
         public IActionResult Listar () {
             ComentarioRepositorio comentarios = new ComentarioRepositorio ();

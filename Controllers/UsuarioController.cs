@@ -30,7 +30,7 @@ namespace Senai.OO.ProjetoFinal.Controllers {
                 //     //Validando o email e a confirmação de senha
                     if (Validacao.ValidarEmail (form["email"]) == true) {
                         //Validando o tipo de usuario
-                        if (Validacao.ValidarUsuario (form["email"], form["senha"]) == true) {
+                        if (Validacao.ValidarUsuario (form["email"], form["senha"]) && Validacao.ValidarTexto(form["senha"]) == true) {
                             usuario.Tipo = "administrador";
                         } else {
                             usuario.Tipo = "usuario";

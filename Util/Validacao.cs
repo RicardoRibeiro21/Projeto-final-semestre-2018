@@ -19,5 +19,14 @@ namespace Projeto_final_semestre_2018.Util
             }
             return false;
         }
+        public static bool ValidarTexto (string texto){
+            if (string.IsNullOrEmpty(texto) == true)
+            {
+                return false;
+            } else
+            {
+                return true;
+            }
+        }
     }
 }

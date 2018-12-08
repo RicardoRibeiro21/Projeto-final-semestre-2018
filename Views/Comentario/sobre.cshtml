@@ -11,19 +11,23 @@
 </head>
 
 <body>
-    <header>
+  <header>
         <div class="container">
             <div class="banner">
                 <nav class="menu">
                     <ul>
                         <li>
-                            <a href="sobre.html">Sobre nós</a></li>
+                            <a>@Html.ActionLink("Sobre Nós", "sobre", "Comentario")</a>
+                        </li>
                         <li>
-                            <a href="contatos.html">Contato</a></li>
+                            <a>@Html.ActionLink("Contato", "Contato", "Comentario")</a>
+                        </li>
                         <li>
-                            <a href="perguntas-frequentes.html">Suporte</a></li>
+                            <a>@Html.ActionLink("Suporte", "perguntas", "Comentario")</a>
+                        </li>
                         <li>
-                            <a href="index.html">Home</a></li>
+                            <a >@Html.ActionLink("Home", "index", "Comentario")</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="banner-opacity">
@@ -32,6 +36,7 @@
                     </div>
                 </div>
             </div>
+
     </header>
     <main>
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
