@@ -32,7 +32,7 @@ namespace Senai.OO.ProjetoFinal.Controllers {
             ViewBag.Mensagem = "Comentário cadastrado, aguarde a aprovação dos administradores";
 
             } else{
-                // View.
+                ViewBag.Mensagem = "Mensagem inválida.";
             }
             return RedirectToAction ("index", "Comentario");
         }
@@ -51,9 +51,13 @@ namespace Senai.OO.ProjetoFinal.Controllers {
         }
         // [HttpPost]
         // public ActionResult aprovacao(IFormCollection form) {
-
+        //    ComentarioModel comentario = new ComentarioModel(form: ["decisao"]);
+        //     if ()
+        //     {
+                
+        //     }
+        // return View();
         // }
-    
 
         [HttpGet]
         public IActionResult index(){

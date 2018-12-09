@@ -20,34 +20,29 @@ namespace Senai.OO.ProjetoFinal.Controllers {
 
         [HttpPost]
         public ActionResult Cadastrar (IFormCollection form) {
-         if (string.IsNullOrEmpty (form["nome"]) || string.IsNullOrEmpty (form["email"]) || string.IsNullOrEmpty (form["senha"]) || string.IsNullOrEmpty (form["senhaVerificacao"])) {
+            if (string.IsNullOrEmpty (form["nome"]) || string.IsNullOrEmpty (form["email"]) || string.IsNullOrEmpty (form["senha"]) || string.IsNullOrEmpty (form["senhaVerificacao"])) {
                 UsuarioViewModel usuario = new UsuarioViewModel (nome: form["nome"],
                     email: form["email"],
                     senha: form["senha"]
                 );
-                //Verificando se o email inserido já existe
-                // if (form["email"] != usuarioRepositorio.BuscarPorEmail (usuario.Email)) {
                 //     //Validando o email e a confirmação de senha
-                    if (Validacao.ValidarEmail (form["email"]) == true) {
-                        //Validando o tipo de usuario
-                        if (Validacao.ValidarUsuario (form["email"], form["senha"]) && Validacao.ValidarTexto(form["senha"]) == true) {
-                            usuario.Tipo = "administrador";
-                        } else {
-                            usuario.Tipo = "usuario";
-                        }
-                UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio ();
-                        usuarioRepositorio.Cadastrar (usuario);
-                        ViewBag.Mensagem = "Usuário Cadastrado";
-                    } else {
-                        ViewBag.Mensagem = "Confirmação de senha inválida ou email incorreto";
-                        return View ();
-                    }
-                // } else {
-                //     ViewBag.Mensagem = "Email já cadastrado";
-                //     return View ();
-                // }
-            } else {
-                return View ();
+                if (!Validacao.ValidarEmail (form["email"]) == true) {
+                    ViewBag.Mensagem = "Email inválido";
+                } //Validando o tipo de usuario
+                if (Validacao.ValidarUsuario (form["email"], form["senha"]) && Validacao.ValidarTexto (form["senha"]) == true) {
+                    usuario.Tipo = "administrador";
+                } else {
+                    usuario.Tipo = "usuario";
+                }
+                //Validando a senha
+                if (!Validacao.ValidarSenha (form["senha"], form["senhaVerificacao"])) {
+                    ViewBag.Mensagem = "Confirmação de senha inválida ou email incorreto";
+                    return View();
+                } else {
+                    UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio ();
+                    usuarioRepositorio.Cadastrar (usuario);
+                    ViewBag.Mensagem = "Usuário Cadastrado";
+                }
             }
             return RedirectToAction ("FazerLogin", "Usuario");
         }
@@ -64,7 +59,7 @@ namespace Senai.OO.ProjetoFinal.Controllers {
             if (usuario != null) {
                 HttpContext.Session.SetString ("idUsuario", usuario.Id.ToString ());
                 HttpContext.Session.SetString ("nomeUsuario", usuario.Nome.ToString ());
-                HttpContext.Session.SetString ("TipoUsuario", usuario.Tipo.ToString());
+                HttpContext.Session.SetString ("TipoUsuario", usuario.Tipo.ToString ());
                 if (usuario.Tipo == "administrador") {
                     return RedirectToAction ("aprovacao", "Comentario");
                 }

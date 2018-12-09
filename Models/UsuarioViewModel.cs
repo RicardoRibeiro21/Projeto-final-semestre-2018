@@ -1,5 +1,5 @@
-﻿using Microsoft.Extensions.Primitives;
-using System;
+﻿using System;
+using Microsoft.Extensions.Primitives;
 namespace Senai.OO.ProjetoFinal.Models {
 
     public class UsuarioViewModel {
@@ -20,7 +20,6 @@ namespace Senai.OO.ProjetoFinal.Models {
             this.Nome = nome;
             this.Email = email;
             this.Senha = senha;
-            
         }
 
         public int Id { get; set; }
@@ -28,6 +27,7 @@ namespace Senai.OO.ProjetoFinal.Models {
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
+        public string SenhaVerificacao { get; set; }
         public string Tipo { get; set; }
 
     }

@@ -62,6 +62,7 @@ namespace Projeto_final_semestre_2018.Repositorios {
                             nome: dados[1],
                             email: dados[2],
                             senha: dados[3],
+                           
                             tipo: dados[4]
                         );
                         return usuario;

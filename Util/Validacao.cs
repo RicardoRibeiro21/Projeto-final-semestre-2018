@@ -27,6 +27,25 @@ namespace Projeto_final_semestre_2018.Util
             {
                 return true;
             }
+
         }
+        public static bool ValidarSenha (string senha, string senhaVerificacao){
+            if (senha == senhaVerificacao)
+            {
+                return true;
+            } else{
+                return false;
+            }
+        }
+        //  public bool EmailValido(string email, List<Usuario> database)
+        // {
+        //     foreach (Usuario item in database)
+        //     {
+        //         if(item.Email == email){
+        //             return false;
+        //         }
+        //     }
+        //     return true;
+        // }
     }
 }
