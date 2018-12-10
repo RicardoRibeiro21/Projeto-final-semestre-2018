@@ -45,8 +45,7 @@ namespace Senai.OO.ProjetoFinal.Controllers {
                 ViewData["Comentarios"] = ListaComentario.Listar();
                 return RedirectToAction ("mostrar");
         }
-
-        
+    
         [HttpGet]
         public ActionResult Rejeitar (int id) {
                 ComentarioRepSerealizado ListaComentario = new ComentarioRepSerealizado ();
