@@ -1,5 +1,7 @@
 @using Senai.OO.ProjetoFinal.Models;
-
+@{
+    List<ComentarioModel> comentarios = ViewData["Comentarios"] as List<ComentarioModel>;
+}
 <!DOCTYPE html>
 <html>
 
@@ -118,7 +120,7 @@
         <form id="comentarios" action="/Comentario/Cadastrar" method="POST">
             <div class="coments">
                 <h2>Comentários</h2>
-        @foreach (var item in ViewData["ComentariosAprovados"] as List<ComentarioModel>){
+        @foreach (ComentarioModel item in comentarios){
                 <div class="coment-1 grid-1">
                     <img src="./img/Foto de perfil.jpg" alt="Foto de perfil" class="item img">
                     <p name="comentarioUsuario" class="item comentarioUsuario">@item.Texto</p>

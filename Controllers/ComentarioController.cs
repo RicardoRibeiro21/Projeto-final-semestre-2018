@@ -40,30 +40,39 @@ namespace Senai.OO.ProjetoFinal.Controllers {
 
         [HttpGet]
         public ActionResult Aprovacao (int id) {
-            if (HttpContext.Session.GetString ("TipoUsuario") == "usuario") {
-                return RedirectToAction ("index", "Comentario");
-            } else {
                 ComentarioRepSerealizado ListaComentario = new ComentarioRepSerealizado ();
-                ViewData["Comentarios"] = ListaComentario.  Listar();
-                Console.WriteLine(ListaComentario.Listar().Count);
                 ListaComentario.Aprovar (id);
+                ViewData["Comentarios"] = ListaComentario.Listar();
                 return RedirectToAction ("mostrar");
-            }
+        }
+
+        
+        [HttpGet]
+        public ActionResult Rejeitar (int id) {
+                ComentarioRepSerealizado ListaComentario = new ComentarioRepSerealizado ();
+                ListaComentario.Reprovar (id);
+                ViewData["Comentarios"] = ListaComentario.Listar();
+                return RedirectToAction ("mostrar");
         }
 
         [HttpGet]
         public ActionResult mostrar () {
-             ComentarioRepSerealizado ListaComentario = new ComentarioRepSerealizado ();
-                ViewData["Comentarios"] = ListaComentario.Listar();
+            if (HttpContext.Session.GetString ("TipoUsuario") == "usuario") {
+                return RedirectToAction ("index", "Comentario");
+            } else {
+             ComentarioRepSerealizado listaComentarios = new ComentarioRepSerealizado();
+                ViewData["Comentarios"] = listaComentarios.Listar();
                 return View ();
+            }
         }
 
         [HttpGet]
         public IActionResult index () {
             ComentarioRepSerealizado ListaComentario = new ComentarioRepSerealizado ();
-            ViewData["ComentariosAprovados"] = ListaComentario.Listar ();
+            ViewData["Comentarios"] = ListaComentario.ComentariosAprovados ();
             return View ();
         }
+       
 
         [HttpGet]
         public IActionResult sobre () {

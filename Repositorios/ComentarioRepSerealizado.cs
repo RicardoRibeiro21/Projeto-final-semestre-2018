@@ -19,15 +19,30 @@ namespace Senai.OO.ProjetoFinal.Repositorios {
             }
         }
         public void Aprovar (int id) {
-            ComentarioRepositorio ListaComentario = new ComentarioRepositorio ();
-            List<ComentarioModel> ComentariosAprovados = new List<ComentarioModel> ();
-            foreach (ComentarioModel item in ListaComentario.Listar ()) {
-                if (item.Aprovacao) {
-                    ComentariosAprovados.Add (item);
-                } else {
-                    ComentariosAprovados.Remove (item);
+            int item = CaçarId(id);
+            if (!ComentariosSalvos[item].Aprovacao)
+            {
+                ComentariosSalvos[item].Aprovacao = true;
+            }
+        }
+        public void Reprovar (int id){
+         int item = CaçarId(id);
+            if (ComentariosSalvos[item].Aprovacao)
+            {
+                ComentariosSalvos[item].Aprovacao = false;
+            }
+        }   
+        
+
+        public List<ComentarioModel> ComentariosAprovados(){
+            List<ComentarioModel> ComentariosAceitos = new List<ComentarioModel> ();
+            foreach (ComentarioModel comentario in ComentariosSalvos) {
+                if (comentario.Aprovacao) {
+                    ComentariosAceitos.Add (comentario);
+                    Salvar();
                 }
             }
+            return ComentariosAceitos;
         }
         
         public List<ComentarioModel> Listar () {
@@ -41,7 +56,6 @@ namespace Senai.OO.ProjetoFinal.Repositorios {
             return (List<ComentarioModel>) serealizador.Deserialize (memoria);
         }
         public ComentarioModel Cadastrar (ComentarioModel comentario) {
-            comentario.Id = ComentariosSalvos.Count + 1;
             ComentariosSalvos.Add (comentario);
             Salvar();
             return comentario;
@@ -53,6 +67,16 @@ namespace Senai.OO.ProjetoFinal.Repositorios {
                 }
             }
             return null;
+        }
+        public int CaçarId (int id){
+            foreach (ComentarioModel item in ComentariosSalvos)
+            {
+                if (item.Id == id)
+                {
+                    return id;
+                }
+            }
+            return 0;
         }
         public void Salvar () {
             //Realizando a serealização
