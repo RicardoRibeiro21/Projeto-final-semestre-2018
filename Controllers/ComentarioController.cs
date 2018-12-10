@@ -21,17 +21,16 @@ namespace Senai.OO.ProjetoFinal.Controllers {
         [HttpPost]
         public ActionResult Cadastrar (IFormCollection form) {
             ComentarioModel comentario = new ComentarioModel (texto: form["coment"]);
-            if (Validacao.ValidarTexto(form["coment"]) == true)
-            {
-            comentario.DataCriacao = DateTime.Now;
-            //Pegar o Id do Usuário Logado
-            comentario.Usuario = HttpContext.Session.GetString ("idUsuario");
-            comentario.Aprovacao = false;
-            ComentarioRepositorio comentarioRep = new ComentarioRepositorio ();
-            comentarioRep.Cadastrar (comentario);
-            ViewBag.Mensagem = "Comentário cadastrado, aguarde a aprovação dos administradores";
+            if (Validacao.ValidarTexto (form["coment"]) == true) {
+                comentario.DataCriacao = DateTime.Now;
+                //Pegar o Id do Usuário Logado
+                comentario.Usuario = HttpContext.Session.GetString ("NomeUsuario");
+                comentario.Aprovacao = false;
+                ComentarioRepositorio comentarioRep = new ComentarioRepositorio ();
+                comentarioRep.Cadastrar (comentario);
+                ViewBag.Mensagem = "Comentário cadastrado, aguarde a aprovação dos administradores";
 
-            } else{
+            } else {
                 ViewBag.Mensagem = "Mensagem inválida.";
             }
             return RedirectToAction ("index", "Comentario");
@@ -39,47 +38,52 @@ namespace Senai.OO.ProjetoFinal.Controllers {
 
         [HttpGet]
         public ActionResult aprovacao (int id) {
-            if (HttpContext.Session.GetString ("TipoUsuario") == "usuario")
-            {
+            if (HttpContext.Session.GetString ("TipoUsuario") == "usuario") {
                 return RedirectToAction ("index", "Comentario");
-            } else
-            {
-            ComentarioRepositorio ListaComentario = new ComentarioRepositorio ();
-            ViewData["Comentarios"] = ListaComentario.Listar();
-            return View ();
+            } else {
+                ComentarioRepositorio ListaComentario = new ComentarioRepositorio ();
+                ViewData["Comentarios"] = ListaComentario.Listar ();
+                return View ();
             }
         }
+
         [HttpPost]
-        public ActionResult aprovacao(IFormCollection form) {
-           ComentarioRepositorio comentarioRep = new ComentarioRepositorio();
-            if (comentarioRep != null)
-            {
-               foreach (var item in comentarioRep)
-               {
-                   
-               } 
+        public ActionResult aprovacao (IFormCollection form) {
+            ComentarioRepositorio ListaComentario = new ComentarioRepositorio ();
+            List<ComentarioModel> ComentariosAprovados = new List<ComentarioModel> ();
+            foreach (ComentarioModel item in ListaComentario.Listar ()) {
+                if (item.Aprovacao) {
+                    ComentariosAprovados.Add (item);
+                } else {
+                    ComentariosAprovados.Remove (item);
+                }
             }
-        return View();
+            ViewData["ComentariosAprovados"] = ListaComentario.Listar ();
+            return View ();
         }
 
         [HttpGet]
-        public IActionResult index(){
+        public IActionResult index () {
             ComentarioRepositorio ListaComentario = new ComentarioRepositorio ();
-            ViewData["Comentarios"] = ListaComentario.Listar();
+            ViewData["ComentariosAprovados"] = ListaComentario.Listar ();
             return View ();
         }
+
         [HttpGet]
-        public IActionResult sobre(){
-            return View();
+        public IActionResult sobre () {
+            return View ();
         }
+
         [HttpGet]
-        public IActionResult Contato(){
-            return View();
+        public IActionResult Contato () {
+            return View ();
         }
+
         [HttpGet]
-        public IActionResult perguntas(){
-            return View();
+        public IActionResult perguntas () {
+            return View ();
         }
+
         [HttpGet]
         public IActionResult Listar () {
             ComentarioRepositorio comentarios = new ComentarioRepositorio ();

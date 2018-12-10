@@ -118,7 +118,7 @@
         <form id="comentarios" action="/Comentario/Cadastrar" method="POST">
             <div class="coments">
                 <h2>Comentários</h2>
-        @foreach (var item in ViewData["Comentarios"] as List<ComentarioModel>){
+        @foreach (var item in ViewData["ComentariosAprovados"] as List<ComentarioModel>){
                 <div class="coment-1 grid-1">
                     <img src="./img/Foto de perfil.jpg" alt="Foto de perfil" class="item img">
                     <p name="comentarioUsuario" class="item comentarioUsuario">@item.Texto</p>

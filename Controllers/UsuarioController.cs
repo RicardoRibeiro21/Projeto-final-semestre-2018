@@ -37,7 +37,7 @@ namespace Senai.OO.ProjetoFinal.Controllers {
                     }
                     //Validando a senha
                     if (!Validacao.ValidarSenha (form["senha"], form["senhaVerificacao"])) {
-                        ViewBag.Mensagem = "Confirmação de senha inválida ou email incorreto";
+                        ViewBag.Mensagem = "Confirmação de senha inválida.";
                         return View ();
                     } else {
                         UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio ();
