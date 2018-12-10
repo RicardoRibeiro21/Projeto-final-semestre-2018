@@ -49,15 +49,18 @@ namespace Senai.OO.ProjetoFinal.Controllers {
             return View ();
             }
         }
-        // [HttpPost]
-        // public ActionResult aprovacao(IFormCollection form) {
-        //    ComentarioModel comentario = new ComentarioModel(form: ["decisao"]);
-        //     if ()
-        //     {
-                
-        //     }
-        // return View();
-        // }
+        [HttpPost]
+        public ActionResult aprovacao(IFormCollection form) {
+           ComentarioRepositorio comentarioRep = new ComentarioRepositorio();
+            if (comentarioRep != null)
+            {
+               foreach (var item in comentarioRep)
+               {
+                   
+               } 
+            }
+        return View();
+        }
 
         [HttpGet]
         public IActionResult index(){

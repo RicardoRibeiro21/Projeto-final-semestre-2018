@@ -29,7 +29,7 @@ namespace Senai.OO.ProjetoFinal.Controllers {
                 if (!Validacao.ValidarEmail (form["email"])) {
                     ViewBag.Mensagem = "Email inválido";
                     //Validando o tipo de usuario
-                } else{
+                } else {
                     if (Validacao.ValidarUsuario (form["email"], form["senha"]) && Validacao.ValidarTexto (form["senha"]) == true) {
                         usuario.Tipo = "administrador";
                     } else {
@@ -43,13 +43,13 @@ namespace Senai.OO.ProjetoFinal.Controllers {
                         UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio ();
                         usuarioRepositorio.Cadastrar (usuario);
                         ViewBag.Mensagem = "Usuário Cadastrado";
-            return RedirectToAction ("FazerLogin", "Usuario");
+                        return RedirectToAction ("FazerLogin", "Usuario");
                     }
                 }
             } else {
                 ViewBag.Mensagem = "Campos inválidos";
             }
-            return RedirectToAction("Cadastrar", "Usuario");
+            return RedirectToAction ("Cadastrar", "Usuario");
         }
 
         [HttpGet]
