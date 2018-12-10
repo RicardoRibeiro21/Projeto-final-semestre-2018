@@ -43,7 +43,7 @@ namespace AspNetCore
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n\r\n");
             EndContext();
             BeginContext(27, 380, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "60c8a8b365454f00a92df6db80fe894a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "143f8e255f774d3ab233a536319bedbb", async() => {
                 BeginContext(33, 367, true);
                 WriteLiteral(@"
     <meta charset=""utf-8"" />
@@ -70,7 +70,7 @@ namespace AspNetCore
             WriteLiteral("\r\n\r\n");
             EndContext();
             BeginContext(411, 4254, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3d65984784f1497ba83178e54c346307", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "675a793ab1594780b26004c485dbfe22", async() => {
                 BeginContext(417, 204, true);
                 WriteLiteral("\r\n  <header>\r\n        <div class=\"container\">\r\n            <div class=\"banner\">\r\n                <nav class=\"menu\">\r\n                    <ul>\r\n                        <li>\r\n                            <a>");
                 EndContext();

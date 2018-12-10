@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Projeto_final_semestre_2018.Util;
 using Senai.OO.ProjetoFinal.Models;
 using Senai.OO.ProjetoFinal.Repositorio;
+using Senai.OO.ProjetoFinal.Repositorios;
 
 namespace Senai.OO.ProjetoFinal.Controllers {
+
     public class ComentarioController : Controller {
         [HttpGet]
         public ActionResult Cadastrar () {
@@ -26,10 +28,10 @@ namespace Senai.OO.ProjetoFinal.Controllers {
                 //Pegar o Id do Usuário Logado
                 comentario.Usuario = HttpContext.Session.GetString ("NomeUsuario");
                 comentario.Aprovacao = false;
-                ComentarioRepositorio comentarioRep = new ComentarioRepositorio ();
+                ComentarioRepSerealizado comentarioRep = new ComentarioRepSerealizado ();
                 comentarioRep.Cadastrar (comentario);
                 ViewBag.Mensagem = "Comentário cadastrado, aguarde a aprovação dos administradores";
-
+                Console.WriteLine (comentario.Texto);
             } else {
                 ViewBag.Mensagem = "Mensagem inválida.";
             }
@@ -37,34 +39,28 @@ namespace Senai.OO.ProjetoFinal.Controllers {
         }
 
         [HttpGet]
-        public ActionResult aprovacao (int id) {
+        public ActionResult Aprovacao (int id) {
             if (HttpContext.Session.GetString ("TipoUsuario") == "usuario") {
                 return RedirectToAction ("index", "Comentario");
             } else {
-                ComentarioRepositorio ListaComentario = new ComentarioRepositorio ();
-                ViewData["Comentarios"] = ListaComentario.Listar ();
-                return View ();
+                ComentarioRepSerealizado ListaComentario = new ComentarioRepSerealizado ();
+                ViewData["Comentarios"] = ListaComentario.  Listar();
+                Console.WriteLine(ListaComentario.Listar().Count);
+                ListaComentario.Aprovar (id);
+                return RedirectToAction ("mostrar");
             }
         }
 
-        [HttpPost]
-        public ActionResult aprovacao (IFormCollection form) {
-            ComentarioRepositorio ListaComentario = new ComentarioRepositorio ();
-            List<ComentarioModel> ComentariosAprovados = new List<ComentarioModel> ();
-            foreach (ComentarioModel item in ListaComentario.Listar ()) {
-                if (item.Aprovacao) {
-                    ComentariosAprovados.Add (item);
-                } else {
-                    ComentariosAprovados.Remove (item);
-                }
-            }
-            ViewData["ComentariosAprovados"] = ListaComentario.Listar ();
-            return View ();
+        [HttpGet]
+        public ActionResult mostrar () {
+             ComentarioRepSerealizado ListaComentario = new ComentarioRepSerealizado ();
+                ViewData["Comentarios"] = ListaComentario.Listar();
+                return View ();
         }
 
         [HttpGet]
         public IActionResult index () {
-            ComentarioRepositorio ListaComentario = new ComentarioRepositorio ();
+            ComentarioRepSerealizado ListaComentario = new ComentarioRepSerealizado ();
             ViewData["ComentariosAprovados"] = ListaComentario.Listar ();
             return View ();
         }
@@ -86,7 +82,7 @@ namespace Senai.OO.ProjetoFinal.Controllers {
 
         [HttpGet]
         public IActionResult Listar () {
-            ComentarioRepositorio comentarios = new ComentarioRepositorio ();
+            ComentarioRepSerealizado comentarios = new ComentarioRepSerealizado ();
             ViewData["Comentarios"] = comentarios.Listar ();
             return View ();
         }

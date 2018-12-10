@@ -1,4 +1,7 @@
 @using Senai.OO.ProjetoFinal.Models;
+@{
+    List<ComentarioModel> comentarios = ViewData["Comentarios"] as List<ComentarioModel>;
+}
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +42,7 @@
         <main>
             <h2>Aprovação de comentários</h2>
             <section id="comentarios">
-                  @foreach (var item in ViewData["Comentarios"] as List<ComentarioModel>){
+                  @foreach (ComentarioModel item in comentarios){
             <div class="coments">
                 <div class="coment-1 grid-1">
                     <img src="./img/Foto de perfil.jpg" alt="Foto de perfil" class="item img">

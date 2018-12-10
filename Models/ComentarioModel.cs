@@ -2,7 +2,8 @@ using System;
 using Microsoft.Extensions.Primitives;
 
 namespace Senai.OO.ProjetoFinal.Models
-{
+{   
+     [Serializable]
     public class ComentarioModel
     {
         public DateTime DataCriacao { get; set; }
