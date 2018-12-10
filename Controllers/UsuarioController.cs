@@ -20,31 +20,36 @@ namespace Senai.OO.ProjetoFinal.Controllers {
 
         [HttpPost]
         public ActionResult Cadastrar (IFormCollection form) {
-            if (string.IsNullOrEmpty (form["nome"]) || string.IsNullOrEmpty (form["email"]) || string.IsNullOrEmpty (form["senha"]) || string.IsNullOrEmpty (form["senhaVerificacao"])) {
+            if (!string.IsNullOrEmpty (form["nome"]) || !string.IsNullOrEmpty (form["email"]) || !string.IsNullOrEmpty (form["senha"]) || !string.IsNullOrEmpty (form["senhaVerificacao"])) {
                 UsuarioViewModel usuario = new UsuarioViewModel (nome: form["nome"],
                     email: form["email"],
                     senha: form["senha"]
                 );
                 //     //Validando o email e a confirmação de senha
-                if (!Validacao.ValidarEmail (form["email"]) == true) {
+                if (!Validacao.ValidarEmail (form["email"])) {
                     ViewBag.Mensagem = "Email inválido";
-                } //Validando o tipo de usuario
-                if (Validacao.ValidarUsuario (form["email"], form["senha"]) && Validacao.ValidarTexto (form["senha"]) == true) {
-                    usuario.Tipo = "administrador";
-                } else {
-                    usuario.Tipo = "usuario";
-                }
-                //Validando a senha
-                if (!Validacao.ValidarSenha (form["senha"], form["senhaVerificacao"])) {
-                    ViewBag.Mensagem = "Confirmação de senha inválida ou email incorreto";
-                    return View();
-                } else {
-                    UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio ();
-                    usuarioRepositorio.Cadastrar (usuario);
-                    ViewBag.Mensagem = "Usuário Cadastrado";
-                }
-            }
+                    //Validando o tipo de usuario
+                } else{
+                    if (Validacao.ValidarUsuario (form["email"], form["senha"]) && Validacao.ValidarTexto (form["senha"]) == true) {
+                        usuario.Tipo = "administrador";
+                    } else {
+                        usuario.Tipo = "usuario";
+                    }
+                    //Validando a senha
+                    if (!Validacao.ValidarSenha (form["senha"], form["senhaVerificacao"])) {
+                        ViewBag.Mensagem = "Confirmação de senha inválida ou email incorreto";
+                        return View ();
+                    } else {
+                        UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio ();
+                        usuarioRepositorio.Cadastrar (usuario);
+                        ViewBag.Mensagem = "Usuário Cadastrado";
             return RedirectToAction ("FazerLogin", "Usuario");
+                    }
+                }
+            } else {
+                ViewBag.Mensagem = "Campos inválidos";
+            }
+            return RedirectToAction("Cadastrar", "Usuario");
         }
 
         [HttpGet]

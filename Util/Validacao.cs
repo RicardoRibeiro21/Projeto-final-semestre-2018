@@ -13,7 +13,7 @@ namespace Projeto_final_semestre_2018.Util
             return false;
         }
         public static bool ValidarUsuario(string email, string senha){
-            if (email.Contains("@checkpoint.org") && senha.Contains("admin"))
+            if (email.Contains("@carfel.org") && senha.Contains("admin"))
             {
                 return true;
             }
@@ -37,15 +37,5 @@ namespace Projeto_final_semestre_2018.Util
                 return false;
             }
         }
-        //  public bool EmailValido(string email, List<Usuario> database)
-        // {
-        //     foreach (Usuario item in database)
-        //     {
-        //         if(item.Email == email){
-        //             return false;
-        //         }
-        //     }
-        //     return true;
-        // }
     }
 }
