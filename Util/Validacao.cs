@@ -1,4 +1,7 @@
+using System.IO;
 using Projeto_final_semestre_2018.Repositorios;
+using Senai.OO.ProjetoFinal.Models;
+using Senai.OO.ProjetoFinal.Repositorios;
 
 namespace Projeto_final_semestre_2018.Util {
     public class Validacao {
@@ -8,6 +11,24 @@ namespace Projeto_final_semestre_2018.Util {
                 return true;
             }
 
+            return false;
+        }
+        public static bool BuscarPorEmail(string email)
+        {
+             using (StreamReader sr = new StreamReader ("usuarios.csv")) {
+                while (!sr.EndOfStream) {
+                    var linha = sr.ReadLine ();
+
+                    if (string.IsNullOrEmpty (linha)) {
+                        continue;
+                    }
+                    string[] dados = linha.Split (";");
+
+                    if (dados[3] == email) {
+                     return true;
+                    };
+                }
+            }
             return false;
         }
         public static bool ValidarUsuario (string email, string senha) {

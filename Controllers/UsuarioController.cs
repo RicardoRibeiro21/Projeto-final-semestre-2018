@@ -6,7 +6,6 @@ using Projeto_final_semestre_2018.Repositorios;
 using Projeto_final_semestre_2018.Util;
 using Senai.OO.ProjetoFinal.Interface;
 using Senai.OO.ProjetoFinal.Models;
-using Senai.OO.ProjetoFinal.Repositorio;
 
 namespace Senai.OO.ProjetoFinal.Controllers {
     public class UsuarioController : Controller {
@@ -26,8 +25,8 @@ namespace Senai.OO.ProjetoFinal.Controllers {
                     senha: form["senha"]
                 );
                 //     //Validando o email e a confirmação de senha
-                if (!Validacao.ValidarEmail (form["email"])) {
-                    ViewBag.Mensagem = "Email inválido";
+                if (!Validacao.ValidarEmail (form["email"]) && Validacao.BuscarPorEmail(form["email"]) == true) {
+                    ViewBag.Mensagem = "Email inválido ou já cadastrado";
                     //Validando o tipo de usuario
                 } else {
                     if (Validacao.ValidarUsuario (form["email"], form["senha"]) && Validacao.ValidarTexto (form["senha"]) == true) {

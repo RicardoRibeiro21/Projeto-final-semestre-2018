@@ -6,24 +6,7 @@ using Senai.OO.ProjetoFinal.Models;
 
 namespace Projeto_final_semestre_2018.Repositorios {
     public class UsuarioRepositorio : IUsuario {
-
-        public UsuarioViewModel BuscarPorEmail (string email) {
-            string[] linhas = System.IO.File.ReadAllLines ("usuarios.csv");
-            foreach (var item in linhas) {
-                string[] dados = item.Split (";");
-                if (email.ToString () == dados[2]) {
-                    UsuarioViewModel usuario = new UsuarioViewModel (
-                        id: int.Parse (dados[0]),
-                        nome: dados[1],
-                        email: dados[2],
-                        senha: dados[3],
-                        tipo: dados[4]
-                    );
-                    return usuario;
-                }
-            }
-            return null;
-        }
+        
 
         public UsuarioViewModel Cadastrar (UsuarioViewModel usuario) {
             if (File.Exists ("usuarios.csv")) {
@@ -62,7 +45,6 @@ namespace Projeto_final_semestre_2018.Repositorios {
                             nome: dados[1],
                             email: dados[2],
                             senha: dados[3],
-                           
                             tipo: dados[4]
                         );
                         return usuario;

@@ -81,5 +81,20 @@ a[id="cadastroScroll"]:target~ #cadastro sec.panel {
     -webkit-transform: translateY(1000px);
 			transform: translateY(1000px);
 }
+@media screen and (max-width: 760px) {
+    #main{
+        width: 80%;
+    }
+    .caixa{
+        margin-left: 45%;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 760px) {
+    .caixa{
+        margin-left: 25%;
+        width: 100%;
+    }
+}
 
 /* Fim /div fazer login */

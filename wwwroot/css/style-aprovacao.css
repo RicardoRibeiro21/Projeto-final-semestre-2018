@@ -93,42 +93,25 @@ a:hover{
 
   
 }
+#comentarios{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.coments {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background: rgb(236, 126, 126);
+}
+
 .logo {
     width: 100%;
     height: 55%;
     transform: scale(0.2);
 }
 /*Sessao css para comentários*/
-#comentarios {
-    margin-top: 0;
-    width: 80%;
-    height:240px;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-}
-.coments img{
-    width: 80%;
-    height: 90%;
-}
-.coment-1 {
-    width: 100%;
-    display: grid;
-    margin-bottom: 0.9em;
-}
-.dataComentario {
-    margin-bottom: 1em;
-}
 
-.grid-1 {
-    grid-template-areas:
-        "img comentarioUsuario comentarioUsuario"
-        "img comentarioUsuario comentarioUsuario"
-        "nomeUsuario comentarioUsuario comentarioUsuario"
-        "dataComentario comentarioUsuario comentarioUsuario"
-        ;
-}
 
 .rodape {
     width: 100%;

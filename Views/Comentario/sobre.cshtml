@@ -1,3 +1,7 @@
+@using Senai.OO.ProjetoFinal.Models;
+@{
+    List<ComentarioModel> comentarios = ViewData["Comentarios"] as List<ComentarioModel>;
+}
 <!DOCTYPE html>
 <html>
 
@@ -28,11 +32,17 @@
                         <li>
                             <a >@Html.ActionLink("Home", "index", "Comentario")</a>
                         </li>
+                          <li>
+                            <a >@Html.ActionLink("Cadastrar", "Cadastrar", "Usuario")</a>
+                        </li>
+                        <li>
+                            <a >@Html.ActionLink("Login", "FazerLogin", "Usuario")</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="banner-opacity">
                     <div class="logo">
-                        <img src="./img/logo.svg" alt="Logo checkpoint">
+                        <img src="/img/logo.svg" alt="Logo checkpoint">
                     </div>
                 </div>
             </div>
@@ -51,20 +61,36 @@
                 <!--Começo do slide-->
                 <h2>Galeria de Fotos</h2>
                 <div class="img-slide">
-                    <img class='photo' src="./img/img1.jpg" alt="tecnologia" />
+                    <img class='photo' src="/img/img1.jpg" alt="tecnologia" />
                 </div>
                 <div class="img-slide">
-                    <img class='photo' src="img/img2.jpg" alt="tecnologia" />
+                    <img class='photo' src="/img/img2.jpg" alt="tecnologia" />
                 </div>
                 <div class="img-slide">
-                    <img class='photo' src="img//img3.jpg" alt="tecnologia" />
+                    <img class='photo' src="/img/img3.jpg" alt="tecnologia" />
                 </div>
                 <div class="img-slide">
-                    <img class='photo' src="./img/img4.jpg" alt="tecnologia" />
+                    <img class='photo' src="/img/img4.jpg" alt="tecnologia" />
                 </div>
             </div>
             <!--Fim do slide-->
         </section>
+         <form id="comentarios" action="/Comentario/Cadastrar" method="POST">
+            <div class="coments">
+        <h2>Comentários</h2>
+        @foreach (ComentarioModel item in comentarios){
+                <div class="coment-1 grid-1">
+                    <img src="./img/Foto de perfil.jfif" alt="Foto de perfil" class="item img">
+                    <p name="comentarioUsuario" class="item comentarioUsuario">@item.Texto</p>
+                    </div> 
+                    <p name="nomeUsuario" class="item nomeUsuario">@item.Usuario</p>
+                    <p name="dataComentario" class="item dataComentario"> @item.DataCriacao.ToShortDateString()</p>          
+        }
+                <div class="botao"><button>Exibir mais</button></div>
+                @ViewBag.Mensagem
+                </div>
+           @ViewBag.Mensagem
+        </form>
         <section id="conquistas">
             <h2>Nossas conquistas</h2>
             <ul>
@@ -72,7 +98,7 @@
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
             </ul>
-            <img src="img/Conquista.png" alt="Conquistas">
+            <img src="/img/Conquista.png" alt="Conquistas">
         </section>
     </main>
     <footer id="rodapé">
@@ -80,25 +106,25 @@
             <ul>
                 <h3>CARFEL</h3>
                 <li>
-                    <a href="#planos" style="transition: all .25s linear;">Comprar</a>
+                    <a >@Html.ActionLink("Comprar", "index/#planos", "Comentario")</a>
                 </li>
                 <li>
-                    <a href="#">Login</a>
+                    <a >@Html.ActionLink("Login", "Fazer Login", "Usuario")</a>
                 </li>
                 <li>
-                    <a href="perguntas-frequentes.html">Perguntas Frequentes</a>
+                    <a>@Html.ActionLink("Suporte", "perguntas", "Comentario")</a>
                 </li>
                 <li>
-                    <a href="contatos.html">Como chegar</a>
+                    <a>@Html.ActionLink("Contato", "Contato", "Comentario")</a>
                 </li>
             </ul>
             <ul>
                 <h3>PARA EMPRESAS</h3>
                 <li>
-                    <a href="sobre.html">Sobre nós</a>
+                    <a>@Html.ActionLink("Sobre Nós", "sobre", "Comentario")</a>
                 </li>
                 <li>
-                    <a href="#planos" style="transition: all .25s linear;">Comprar</a>
+                   <a>@Html.ActionLink("Comprar", "index/#planos", "Comentario") </a>
                 </li>
                 <li>
                     <a href="#">Termos de uso</a>

@@ -81,5 +81,19 @@ main img {
     border-radius: 6px;
     background-color: aliceblue;
 }
-
 /* Fim div cadastrar */
+@media screen and (max-width: 760px) {
+    #cadastro{
+        width: 80%;
+    }
+    .Cadastrar{
+        margin-left: 45%;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 760px) {
+    .Cadastrar{
+        margin-left: 25%;
+        width: 100%;
+    }
+}

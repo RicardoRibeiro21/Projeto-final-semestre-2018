@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Senai.OO.ProjetoFinal.Models;
-using Senai.OO.ProjetoFinal.Repositorio;
 namespace Senai.OO.ProjetoFinal.Interface
 {
    
@@ -39,7 +38,7 @@ namespace Senai.OO.ProjetoFinal.Interface
         /// <returns></returns>
         UsuarioViewModel FazerLogin (string email, string senha);
 
-        UsuarioViewModel BuscarPorEmail (string email);
+ 
     }
 }
     

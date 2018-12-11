@@ -28,11 +28,17 @@
                         <li>
                             <a >@Html.ActionLink("Home", "index", "Comentario")</a>
                         </li>
+                          <li>
+                            <a >@Html.ActionLink("Cadastrar", "Cadastrar", "Usuario")</a>
+                        </li>
+                        <li>
+                            <a >@Html.ActionLink("Login", "Fazer Login", "Usuario")</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="banner-opacity">
                     <div class="logo">
-                        <img src="./img/logo.svg" alt="Logo checkpoint">
+                        <img src="/img/logo.svg" alt="Logo checkpoint">
                     </div>
                 </div>
             </div>
@@ -82,19 +88,19 @@
                 <!--Começo do slide-->
                 <h2>Passo à Passo</h2>
                 <div class="img-slide">
-                    <img class='photo' src="./img/passo (1).jpg" alt="Passo à Passo" />
+                    <img class='photo' src="/img/passo (1).jpg" alt="Passo à Passo" />
                 </div>
                 <div class="img-slide">
-                    <img class='photo' src="img/passo (2).jpg" alt="Passo à Passo" />
+                    <img class='photo' src="/img/passo (2).jpg" alt="Passo à Passo" />
                 </div>
                 <div class="img-slide">
-                    <img class='photo' src="img//passo (3).jpg" alt="Passo à Passo" />
+                    <img class='photo' src="/img//passo (3).jpg" alt="Passo à Passo" />
                 </div>
             </div>
         </section>
         <div>
             <p>Não conseguiu resolver seu problema?
-                <a href="#">Contate-nos!</a>
+                <a>@Html.ActionLink("Contato", "Contato", "Comentario")</a>
             </p>
         </div>
     </main>
@@ -103,25 +109,25 @@
             <ul>
                 <h3>CARFEL</h3>
                 <li>
-                    <a href="#planos" style="transition: all .25s linear;">Comprar</a>
+                    <a >@Html.ActionLink("Comprar", "index/#planos", "Comentario")</a>
                 </li>
                 <li>
-                    <a href="#">Login</a>
+                    <a >@Html.ActionLink("Login", "Fazer Login", "Usuario")</a>
                 </li>
                 <li>
-                    <a href="perguntas-frequentes.html">Perguntas Frequentes</a>
+                    <a>@Html.ActionLink("Suporte", "perguntas", "Comentario")</a>
                 </li>
                 <li>
-                    <a href="contatos.html">Como chegar</a>
+                    <a>@Html.ActionLink("Contato", "Contato", "Comentario")</a>
                 </li>
             </ul>
             <ul>
                 <h3>PARA EMPRESAS</h3>
                 <li>
-                    <a href="sobre.html">Sobre nós</a>
+                    <a>@Html.ActionLink("Sobre Nós", "sobre", "Comentario")</a>
                 </li>
                 <li>
-                    <a href="#planos" style="transition: all .25s linear;">Comprar</a>
+                   <a>@Html.ActionLink("Comprar", "index/#planos", "Comentario") </a>
                 </li>
                 <li>
                     <a href="#">Termos de uso</a>

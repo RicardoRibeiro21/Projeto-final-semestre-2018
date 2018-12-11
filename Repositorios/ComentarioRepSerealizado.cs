@@ -3,7 +3,6 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Senai.OO.ProjetoFinal.Interface;
 using Senai.OO.ProjetoFinal.Models;
-using Senai.OO.ProjetoFinal.Repositorio;
 
 namespace Senai.OO.ProjetoFinal.Repositorios {
     public class ComentarioRepSerealizado : IComentario {

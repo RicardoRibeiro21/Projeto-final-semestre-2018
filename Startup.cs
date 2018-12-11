@@ -35,7 +35,7 @@ namespace Senai.OO.ProjetoFinal {
                 app.UseMvc (
                     rota => rota.MapRoute (
                         name: "default",
-                        template: "{controller=Usuario}/{action=Cadastrar}"
+                        template: "{controller=Comentario}/{action=index}"
                     ));
             }
         }

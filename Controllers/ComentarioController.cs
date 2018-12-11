@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Projeto_final_semestre_2018.Util;
 using Senai.OO.ProjetoFinal.Models;
-using Senai.OO.ProjetoFinal.Repositorio;
 using Senai.OO.ProjetoFinal.Repositorios;
 
 namespace Senai.OO.ProjetoFinal.Controllers {
@@ -26,7 +25,7 @@ namespace Senai.OO.ProjetoFinal.Controllers {
             if (Validacao.ValidarTexto (form["coment"]) == true) {
                 comentario.DataCriacao = DateTime.Now;
                 //Pegar o Id do Usuário Logado
-                comentario.Usuario = HttpContext.Session.GetString ("NomeUsuario");
+                comentario.Usuario = HttpContext.Session.GetString ("nomeUsuario");
                 comentario.Aprovacao = false;
                 ComentarioRepSerealizado comentarioRep = new ComentarioRepSerealizado ();
                 comentarioRep.Cadastrar (comentario);
@@ -75,6 +74,8 @@ namespace Senai.OO.ProjetoFinal.Controllers {
 
         [HttpGet]
         public IActionResult sobre () {
+            ComentarioRepSerealizado ListaComentario = new ComentarioRepSerealizado ();
+            ViewData["Comentarios"] = ListaComentario.ComentariosAprovados ();
             return View ();
         }
 

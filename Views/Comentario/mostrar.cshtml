@@ -44,18 +44,26 @@
             <section id="comentarios">
                   @foreach (ComentarioModel item in comentarios){
             <div class="coments">
+                    <table>
+                        <td>
                 <div class="coment-1 grid-1">
-                    <img src="./img/Foto de perfil.jpg" alt="Foto de perfil" class="item img">
+                    <img src="/img/Foto de perfil.jfif" alt="Foto de perfil" class="item img">
                     <p name="comentarioUsuario" class="item comentarioUsuario">@item.Texto</p>
-                    </div> 
-                    <p name="nomeUsuario" class="item nomeUsuario">@item.Usuario</p>
-                    <p name="dataComentario" class="item dataComentario"> @item.DataCriacao.ToShortDateString()</p>      
                     </div>
-                    <div>
-                        <label class="item grid">
-                            <a href="../Comentario/Aprovacao?id=@item.Id"><button class="aprovar" value="Aprovar"></button></a>
-                            <a href="../Comentario/Rejeitar?id=@item.Id"><button class="rejeitar" value="Rejeitar"></button></a>
+                    </td>
+                    <td>
+                    <p name="nomeUsuario" class="item nomeUsuario">@item.Usuario</p>
+                    </td> 
+                    <td>
+                    <p name="dataComentario" class="item dataComentario"> @item.DataCriacao.ToShortDateString()</p>      
+                    </td>
+               <td>
+                        <label class="item">
+                            <a href="../Comentario/Aprovacao?id=@item.Id">Aprovar</a>
+                            <a href="../Comentario/Rejeitar?id=@item.Id">Rejeitar</a>
                         </label>
+                        </td>
+             </table>
                     </div>
                   }
                 </section>

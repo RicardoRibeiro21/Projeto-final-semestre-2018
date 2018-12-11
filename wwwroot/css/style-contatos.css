@@ -138,25 +138,35 @@ a:hover{
 }
 .empresa img {
     max-width: 200px;
-
 }
 .empresa {
     width: 100%;
     display: flex;
     justify-content: center;
+    height: 500px;
 }
-
+.empresa ul{
+    display: flex;
+    width: 70%;
+}
 .empresa ul li {
     list-style-type: none;
     text-align: center;
+    width: 40%;
 }
-
+.endereco{
+    height: 400px;
+    width: 100%;
+}
+.endereco iframe {
+    width: 60%;
+    height: 40%;
+}
 #rodapé {
     background: cornflowerblue;
     padding: 1.3em;
     width: 100%;
     margin-top: 6%;
-
 }
 .rodape-container {
     width: 80%;
@@ -167,7 +177,6 @@ a:hover{
 #rodapé h3 {
     font-size: 0.9em;
     padding: 1.1em;
-
 }
 #rodapé ul {
     list-style-type: none;
@@ -181,11 +190,34 @@ a:hover{
      }
      .menu ul li {
          padding-right: 4px;
-     }
-    .banner nav {
-       font-size: 0.8em;
-    }
-  
+        }
+        .banner nav {
+            font-size: 0.8em;
+        }
+        .empresa {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .empresa img {
+            width: 65%;
+        }
+        .empresa ul{
+            margin-right: 5%;
+            display: flex;
+            width: 80%;
+        }
+        p {
+            font-size: 0.8em;
+        }
+        a{
+            font-size: 0.8em;
+        }
+        .empresa ul li {
+            list-style-type: none;
+            text-align: center;
+            width: 40%;
+        }
         .rodape-container{
             font-size: 0.8em;
         }
@@ -203,10 +235,22 @@ a:hover{
     .banner {
         height: 300px;
     }
+
     h2 {
         font-size: 0.9em;
     }
+    .form {
+        margin-top: -15%;
+    }
 
+    .empresa{
+        width: 100%;
+        display: flex;
+        justify-items: center;
+    }
+.empresa ul{
+    display: block;
+}
 }
 .rodape-container{
     font-size: 0.65em;

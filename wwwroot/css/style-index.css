@@ -108,11 +108,11 @@ a:hover{
 }
 
 .topico-img {
-    width: 20%;
+    width: 15%;
     height: 35%;
     display: flex;
     flex-direction: column;
-    margin: 0 10%;
+    margin: -4% 10%;
 }
 .topicos {
     display: flex;
@@ -124,12 +124,14 @@ a:hover{
 .topico-img img {
     transform: scale(1.2);
     -webkit-margin-before: 3.2em;
+    margin-top: 120px;
 }
 .topicos p {
     display: flex;
     justify-content: flex-end;
     width: 80%;
-    font-size: 1.2em;
+    font-size: 1.3em;
+    margin-top: 1.2em;
     -webkit-margin-before: -1em;
     -webkit-margin-after: 6em;
 }
@@ -247,14 +249,14 @@ a:hover{
 #comentarios {
     margin-top: 0;
     width: 80%;
-    height: 740px;
+    height: 600px;
     display: flex;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
 }
 .coments img{
-    width: 80%;
+    width: 20%;
     height: 90%;
 }
 .coment-1 {
@@ -275,33 +277,39 @@ a:hover{
         ;
 }
 .botao {
-    width: 20;
-    height: 12%;
+    width: 70%;
+    height: 40%;
     text-align: center;
 }
 .coments button {
     margin: 0;
     border-radius: 1em;
-    width: 10%;
+    width: 30%;
     height: 50%;
+}
+.coments input {
+    /* margin: ; */
+    border-radius: 0.8em;
+    height: 130%;
+    width: 100%;
 }
 .cad-coment {
     width: 100%;
-    height: 50%;
+    height: 60%;
     display: grid;
     margin-top: 1.2em;
 }
 .cad-coment img {
-    width: 75%;
-    height: 85%;
+    width: 100%;
+    height: 80%;
 }
 .grid-3 {
     grid-template-areas:
     "img coment"
     "user coment" ;
-    grid-template-columns: 14% 60%;
-    grid-template-rows: 150px 25px;
-    grid-gap: 0px;
+    grid-template-columns: 14% 80%;
+    grid-template-rows: 100px 25px;
+    grid-gap: 40px;
 }
 .user {
     grid-area: user;
@@ -313,12 +321,18 @@ a:hover{
     grid-area: img;
 }
 .coment {
+    width: 100%;
     height: 60%;
     border-radius: 1em;
     background-color: rgba(123, 171, 235, 0.856); 
 }
+.coments {
+    width: 60%;
+    height: 30%;
+}
 .section-cad-coment {
     display: flex;
+    width: 100%;
 }
 textarea {
     padding: 5px;
@@ -362,13 +376,13 @@ textarea {
 
 }
 #sobre img {
-    width: 20;
+    width: 20%;
     /* float: right; */
     padding: 1em;
     margin: -8% 8%;
 }
 .container-sobre {
-    width: 20;
+    width: 100%;
     margin-left: 24px;
 }
 .container-sobre a {
@@ -379,7 +393,7 @@ textarea {
 #rodapé {
     background: cornflowerblue;
     padding: 1.3em;
-    width: 20;
+    width: 100%;
     margin-top: 6%;
 
 }
@@ -402,26 +416,44 @@ textarea {
     .banner {
         height: 400px;
      }
+     .menu {
+        display: flex;
+        width: 100%;
+        height: 10%;
+        padding: 1.2em;
+        justify-content: flex-end;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
     .menu ul {
-         width: 44%;
-     }
-     .menu ul li {
-         padding-right: 4px;
-     }
+       display: flex;
+    }
+    .menu ul li{
+        font-size: 1.2em;
+        list-style-type: none;
+        padding-right: 8px;
+    }
+    
     .banner nav {
        font-size: 0.8em;
     }
     .topico-img img{
         width: 160%;
-        height: 20;
+        height: 70%;
         margin-right: 5%;
+        margin-top: 70%;
     }
     .topicos {
-        font-size: 0.85em
+        font-size: 0.65em;
+    }
+    #funcionalidades{
+        height: 360px;
     }
     .topico p {
         -webkit-margin-before: -2em;
         -webkit-margin-after: 3em;
+    }
+    .topico-container{
+        width: 100%;
     }
     .free {
         width: 90%;
@@ -474,6 +506,41 @@ textarea {
         margin-top: 28px;   
         font-size: 0.8em;
     }
+    .coments img{
+        width: 40%;
+        height: 90%;
+    }
+    .coment-1 {
+        width: 100%;
+        display: grid;
+        margin-bottom: 0.9em;
+    }
+    .coment {
+        width: 100%;
+        height: 60%;
+        border-radius: 1em;
+        background-color: rgba(123, 171, 235, 0.856); 
+    }
+    .cad-coment img{
+        width: 165%;
+    }
+    .coments button {
+        margin: 0;
+        border-radius: 1em;
+        width: 30%;
+        height: 50%;
+    }
+    .coments input {
+        /* margin: ; */
+        border-radius: 0.8em;
+        height: 130%;
+        width: 100%;
+    }
+    .coments {
+        width: 60%;
+        height: 30%;
+    }
+    
    
     .container-sobre h2 {
         font-size: 1em;
@@ -494,14 +561,21 @@ textarea {
         }
 }
 @media screen and (max-width:480px) {
-    .menu ul {
-        width: 20;
-        margin-top: -20px;
-        margin-left: 3.8% 
-    }
-    .menu ul li {
-        background-color: rgba(100, 89, 255, 0.151);
+    .menu {
+        display: flex;
+        width: 100%;
+        height: 10%;
         padding: 1.1em;
+        justify-content: flex-end;
+        background-color: rgba(100, 89, 255, 0.151);
+    }
+    .menu ul {
+       display: flex;
+    }
+    .menu ul li{
+        font-size: 1em;
+        list-style-type: none;
+        padding-right: 8px;
     }
     .banner {
         height: 300px;
@@ -514,16 +588,19 @@ textarea {
     }
     .topico-img img{
         width: 200%;
-        height: 20;
+        height: 70%;
         margin-right: 3%;
+        margin-top: 100%;
     }
     .topicos {
-        margin-top: 4%;
+        margin-top: 0%;
         margin-left: 10%;
-        font-size: 0.5em
+        font-size: 0.5em;
+        width: 100%;
     }
     .topicos p {
         -webkit-margin-after: 2em;
+        margin-top: 2%;
     }
     .planos-container {
         width: 95%
@@ -539,11 +616,11 @@ textarea {
     }
     .free p {
         margin-top: 0;
-        height: 155px;
+        height: 170px;
         font-size: 0.6em
     }
     .free button {
-        height: 12%;
+        height: 10%;
         margin-top: 28px;   
         font-size: 0.7em;
     }
@@ -552,17 +629,17 @@ textarea {
         height: 340px;
     }
     .pago li {
-        font-size: 1.1em;
-        margin-top: 4%;
+        font-size: 1.4  em;
+        margin-top: 0%;
         padding: 0;
     }
     .pago p {
         margin-top: 0;
-        height: 155px;
-        font-size: 0.6em
+        height: 170px;
+        font-size: 0.6em;
     }
     .pago button {
-        height: 12%;
+        height: 10%;
         margin-top: 28px;   
         font-size: 0.7em;
     }
@@ -577,11 +654,11 @@ textarea {
     }
     .premium p {
         margin-top: 0;
-        height: 155px;
+        height: 170px;
         font-size: 0.6em
     }
     .premium button {
-        height: 12%;
+        height: 10%;
         margin-top: 28px;   
         font-size: 0.7em;
     }
