@@ -157,16 +157,24 @@ a:hover{
 .endereco{
     height: 400px;
     width: 100%;
+    margin-right: 0;
+
 }
 .endereco iframe {
-    width: 60%;
-    height: 40%;
+    margin-top: 14%;
+    margin-left: 30%;
+    width: 40%;
+    height: 70%;
+}
+.endereco p {
+    margin-left: 30%;
+    margin-top: 4%;
 }
 #rodapé {
     background: cornflowerblue;
     padding: 1.3em;
     width: 100%;
-    margin-top: 6%;
+    margin-top: 20%;
 }
 .rodape-container {
     width: 80%;
@@ -185,12 +193,22 @@ a:hover{
     .banner {
         height: 400px;
      }
+     .menu {
+        display: flex;
+        width: 100%;
+        height: 10%;
+        padding: 1.2em;
+        justify-content: flex-end;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
     .menu ul {
-         width: 44%;
-     }
-     .menu ul li {
-         padding-right: 4px;
-        }
+       display: flex;
+    }
+    .menu ul li{
+        font-size: 1.2em;
+        list-style-type: none;
+        padding-right: 8px;
+    }
         .banner nav {
             font-size: 0.8em;
         }
@@ -218,19 +236,36 @@ a:hover{
             text-align: center;
             width: 40%;
         }
+        .endereco{
+            margin-top: -10%
+        }
+        .endereco p {
+            margin-left: 22%;
+        }
+
         .rodape-container{
             font-size: 0.8em;
         }
+        #rodapé{
+            margin-top: 15%
+        }
 }
 @media screen and (max-width:480px) {
-    .menu ul {
+    .menu {
+        display: flex;
         width: 100%;
-        margin-top: -20px;
-        margin-left: 3.8% 
-    }
-    .menu ul li {
-        background-color: rgba(100, 89, 255, 0.151);
+        height: 8%;
         padding: 1.1em;
+        justify-content: flex-end;
+        background-color:  rgba(255, 255, 255, 0.61); 
+    }
+    .menu ul {
+       display: flex;
+    }
+    .menu ul li{
+        font-size: 1em;
+        list-style-type: none;
+        padding-right: 8px;
     }
     .banner {
         height: 300px;
@@ -244,17 +279,31 @@ a:hover{
     }
 
     .empresa{
+        margin-left: 25%;
         width: 100%;
         display: flex;
-        justify-items: center;
     }
 .empresa ul{
     display: block;
 }
+.empresa p {
+    font-size: 0.65em;
 }
+.endereco{
+    margin-top: 20%;
+}
+.endereco iframe {
+    width: 80%;
+    margin-left: 7%;
+}
+.endereco p {
+    margin-left: 10%
+}
+
 .rodape-container{
     font-size: 0.65em;
 }
 #rodapé h3 {
     font-size: 1em
+}
 }

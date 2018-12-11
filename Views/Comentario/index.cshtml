@@ -2,6 +2,7 @@
 @{
     List<ComentarioModel> comentarios = ViewData["Comentarios"] as List<ComentarioModel>;
 }
+                @ViewBag.Mensagem
 <!DOCTYPE html>
 <html>
 
@@ -39,6 +40,7 @@
                         <li>
                             <a >@Html.ActionLink("Login", "FazerLogin", "Usuario")</a>
                         </li>
+                        
                     </ul>
                 </nav>
                 <div class="banner-opacity">
@@ -130,12 +132,11 @@
                 <div class="coment-1 grid-1">
                     <img src="./img/Foto de perfil.jfif" alt="Foto de perfil" class="item img">
                     <p name="comentarioUsuario" class="item comentarioUsuario">@item.Texto</p>
-                    </div> 
                     <p name="nomeUsuario" class="item nomeUsuario">@item.Usuario</p>
                     <p name="dataComentario" class="item dataComentario"> @item.DataCriacao.ToShortDateString()</p>          
+                    </div> 
         }
                 <div class="botao"><button>Exibir mais</button></div>
-                @ViewBag.Mensagem
                 <h3>Nos dê sua opinião sobre os nossos produtos!</h3>
                 <div class="section-cad-coment">
                 <div class="cad-coment grid-3">
@@ -146,7 +147,6 @@
                 </div>
             </div>
             </div>
-           @ViewBag.Mensagem
         </form>
         <section id="sobre">
             <div class="container-sobre">

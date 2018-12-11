@@ -39,6 +39,7 @@ namespace Senai.OO.ProjetoFinal.Controllers {
                         ViewBag.Mensagem = "Confirmação de senha inválida.";
                         return View ();
                     } else {
+                        //Cadastrando o usuário no  banco de dados
                         UsuarioRepositorio usuarioRepositorio = new UsuarioRepositorio ();
                         usuarioRepositorio.Cadastrar (usuario);
                         ViewBag.Mensagem = "Usuário Cadastrado";

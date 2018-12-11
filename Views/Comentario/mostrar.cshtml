@@ -18,19 +18,25 @@
                 <div class="banner">
                     <nav class="menu">
                         <ul>
-                            <li>
-                                <a href="sobre.html">Sobre nós</a>
-                            </li>
-                            <li>
-                                <a href="contatos.html">Contato</a>
-                            </li>
-                            <li>
-                                <a href="perguntas-frequentes.html">Suporte</a>
-                            </li>
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                        </ul>
+                        <li>
+                            <a>@Html.ActionLink("Sobre Nós", "sobre", "Comentario")</a>
+                        </li>
+                        <li>
+                            <a>@Html.ActionLink("Contato", "Contato", "Comentario")</a>
+                        </li>
+                        <li>
+                            <a>@Html.ActionLink("Suporte", "perguntas", "Comentario")</a>
+                        </li>
+                        <li>
+                            <a >@Html.ActionLink("Home", "index", "Comentario")</a>
+                        </li>
+                           <li>
+                            <a >@Html.ActionLink("Cadastrar", "Cadastrar", "Usuario")</a>
+                        </li>
+                        <li>
+                            <a >@Html.ActionLink("Login", "FazerLogin", "Usuario")</a>
+                        </li>
+                    </ul>
                     </nav>
                     <div class="banner-opacity">
                         <div class="logo">

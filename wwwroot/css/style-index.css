@@ -1,3 +1,4 @@
+/* Estilização que servirá para o corpo todo */
 * {
     padding: 0;
     margin: 0;
@@ -48,6 +49,9 @@ a:hover{
     transition: 0.35s;
     color: rgba(55, 55, 221, 0.884);
 }
+/* Fim Estilização que servirá para o corpo todo */
+
+/* Estilização do header do site */
 .container {
     width: 100%;
     height: auto;
@@ -90,7 +94,9 @@ a:hover{
     list-style-type: none;
     padding-right: 20px;
 }
+/* Fim estilização do header do site */
 
+/* Funcionalidades estilização  */
 #funcionalidades {
     display:flex;
     width: 100%;
@@ -135,14 +141,16 @@ a:hover{
     -webkit-margin-before: -1em;
     -webkit-margin-after: 6em;
 }
+/* Funcionalidades estilização  */
+
+/* Planos estilização  */
 #planos {
     display: flex;
     width: 100%;
     padding: 1.2em;
     height: auto;
     justify-content: center;
-    align-items: center;
-    flex: 1; 
+    align-items: center; 
     margin-bottom: 0;
 }
 .planos-container { 
@@ -245,6 +253,8 @@ a:hover{
     border-radius: 10px ;
     font-size: 1.1em;
 }
+/* Planos estilização  */ 
+
 /*Sessao css para comentários*/
 #comentarios {
     margin-top: 0;
@@ -288,9 +298,9 @@ a:hover{
     height: 50%;
 }
 .coments input {
-    /* margin: ; */
+    margin-top: -90%;
     border-radius: 0.8em;
-    height: 130%;
+    height: 1.7em;
     width: 100%;
 }
 .cad-coment {
@@ -339,7 +349,7 @@ textarea {
 }
 /*Fim sessao css para comentários*/
 #sobre {
-    /* background: #ff7c7c; */
+    margin-top: -10%; 
     width: 100%;
     height: auto;
     /* display: flex; */
@@ -455,6 +465,9 @@ textarea {
     .topico-container{
         width: 100%;
     }
+    .planos-container{
+        width: 90%;
+    }
     .free {
         width: 90%;
         height: 480px;
@@ -516,13 +529,14 @@ textarea {
         margin-bottom: 0.9em;
     }
     .coment {
-        width: 100%;
+        width: 130%;
         height: 60%;
         border-radius: 1em;
         background-color: rgba(123, 171, 235, 0.856); 
     }
     .cad-coment img{
         width: 165%;
+        margin-left: -60%;
     }
     .coments button {
         margin: 0;
@@ -531,17 +545,19 @@ textarea {
         height: 50%;
     }
     .coments input {
-        /* margin: ; */
+        margin-top: -200%;
         border-radius: 0.8em;
-        height: 130%;
-        width: 100%;
+        height: 30px;
+        width: 120%;
     }
     .coments {
         width: 60%;
         height: 30%;
     }
     
-   
+    #sobre{
+        margin-top: -20%;
+    }
     .container-sobre h2 {
         font-size: 1em;
     }
@@ -662,9 +678,39 @@ textarea {
         margin-top: 28px;   
         font-size: 0.7em;
     }
+    .coments h3{
+        font-size: 0.8em;
+    }
+    .cad-coment{
+        width: 100%;
+    }
+    .coment-1 p {
+        font-size: 0.8em;
+    }
 
+    .botao {
+        width: 100%;
+        height: 35%;
+    }
+    .botao button {
+        font-size: 0.6em;
+    }
+    .cad-coment img {
+        width: 250%;
+        height: 80%;
+        margin-left: -150%;
+    }
+    .cad-coment input {
+        margin-top: -300%;
+        width: 240%;
+        height: 30px;
+    }
+    .coment{
+        width: 130%;
+        height: 50%;
+    }
     #sobre {
-        margin-top: 6%;
+        margin-top: -50%;
         font-size: 0.65em;
     }
     .conteudo p {
