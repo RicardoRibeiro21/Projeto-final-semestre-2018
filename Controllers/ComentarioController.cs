@@ -27,7 +27,7 @@ namespace Senai.OO.ProjetoFinal.Controllers {
                 comentario.DataCriacao = DateTime.Now;
                 //Pegar o Id do Usuário Logado
                 comentario.Usuario = HttpContext.Session.GetString ("nomeUsuario");
-                if (comentario.Usuario ==null)
+                if (comentario.Usuario == null)
                 {
                     ViewBag.Mensagem = "Você precisa estar logado para fazer comentários";   
                     return RedirectToAction ("index", "Comentario");

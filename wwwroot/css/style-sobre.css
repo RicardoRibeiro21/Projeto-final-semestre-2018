@@ -86,9 +86,21 @@ a:hover{
    display: flex;
 }
 .menu ul li{
-    font-size: 1.5em;
+    font-size: 1.5em;   
     list-style-type: none;
     padding-right: 20px;
+}
+#Galeria{
+    width: 100%;
+    height: 768px;
+    margin: 0;
+}
+.container-galeria {
+    width: 100%;
+}
+.container-galeria img{
+    max-width: 340px;
+    max-height: 290px;    
 }
 
 #rodapé {

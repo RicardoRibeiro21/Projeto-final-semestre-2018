@@ -54,7 +54,7 @@ using Senai.OO.ProjetoFinal.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(161, 368, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "34bd8ec8a6ff471faaa6dac8dc7871ee", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4e0bb6fbe74c4ad5b68c2b57778cbadf", async() => {
                 BeginContext(167, 355, true);
                 WriteLiteral(@"
     <meta charset=""utf-8"" />
@@ -81,7 +81,7 @@ using Senai.OO.ProjetoFinal.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(531, 2872, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec70a1baed6b4be9b4b7695432b37405", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f7994b61b45c4f438012d7c7e185835d", async() => {
                 BeginContext(537, 226, true);
                 WriteLiteral("\r\n        <header>\r\n            <div class=\"container\">\r\n                <div class=\"banner\">\r\n                    <nav class=\"menu\">\r\n                        <ul>\r\n                        <li>\r\n                            <a>");
                 EndContext();
