@@ -1,0 +1,738 @@
+/* Estilização que servirá para o corpo todo */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+h2 {
+    text-align: center;
+    padding: 2.6em;
+    width: 100%;
+    height: 20%;
+}
+a {
+    color: black;
+}
+a:link {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+a:hover{
+    transition: 0.35s;
+    color: rgba(55, 55, 221, 0.884);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+h2 {
+    text-align: center;
+    padding: 2.6em;
+    width: 100%;
+    height: 20%;
+}
+a {
+    color: black;
+}
+a:link {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+a:hover{
+    transition: 0.35s;
+    color: rgba(55, 55, 221, 0.884);
+}
+/* Fim Estilização que servirá para o corpo todo */
+
+/* Estilização do header do site */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.banner {
+    justify-content: center;
+    width: 100%;
+    height: 646px;
+    background-image: url("./team.jpg");
+    background-size: 100%;
+}
+.banner-opacity {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+  
+}
+.logo {
+    width: 100%;
+    height: 55%;
+    transform: scale(0.2);
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    padding: 1.2em;
+    justify-content: flex-end;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.menu ul {
+   display: flex;
+}
+.menu ul li{
+    font-size: 1.5em;
+    list-style-type: none;
+    padding-right: 20px;
+}
+/* Fim estilização do header do site */
+
+/* Funcionalidades estilização  */
+#funcionalidades {
+    display:flex;
+    width: 100%;
+    height: 500px;
+    /* background:rgba(92, 163, 255, 0.795); */
+}
+.container-titulo {
+    /* background:rgba(92, 163, 255, 0.795); */
+    width: 100%
+}
+.topico-container {
+    width: 100%;
+    display: flex;
+    
+}
+
+.topico-img {
+    width: 15%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    margin: -4% 10%;
+}
+.topicos {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    margin-top: 3%;
+}
+.topico-img img {
+    transform: scale(1.2);
+    -webkit-margin-before: 3.2em;
+    margin-top: 120px;
+}
+.topicos p {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+    font-size: 1.3em;
+    margin-top: 1.2em;
+    -webkit-margin-before: -1em;
+    -webkit-margin-after: 6em;
+}
+/* Funcionalidades estilização  */
+
+/* Planos estilização  */
+#planos {
+    display: flex;
+    width: 100%;
+    padding: 1.2em;
+    height: auto;
+    justify-content: center;
+    align-items: center; 
+    margin-bottom: 0;
+}
+.planos-container { 
+   width: 75%;
+   height: auto;
+   
+}
+.planos-container ul {
+    margin-left: 7%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.free {
+    text-align: center;
+    background: #e4e4e4;
+    width: 75%; 
+    min-width: 65%;
+    height: auto;
+}
+.free li {
+    list-style-type: none;
+    padding: 1.2em;
+    font-size: 1.5em
+}
+.free p, li {
+    padding: 1.1em;
+}
+.free img {
+    width: 75%;
+    
+}
+.premium img         {
+    width: 20%;
+}
+.free button {
+    width: 80%;
+    margin-top: 15%;
+    margin-bottom: 10%;
+    padding:  1.2em;
+    background: #eb4949;
+    border-radius: 10px ;
+    font-size: 1.1em;
+}
+
+.pago {
+    text-align: center;
+    background: #e4e4e4;
+    width: 75%;
+    height: auto;
+}
+.pago li {
+    list-style-type: none;
+    padding: 1.2em;
+    font-size: 1.5em
+}
+.pago p, li {
+    padding: 1.1em;
+}
+.pago img {
+    width: 79%;
+    
+}
+
+.pago button {
+    width: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding:  1.2em;
+    background: #eb4949;
+    border-radius: 10px ;
+    font-size: 1.1em;
+}
+
+.premium {
+    text-align: center;
+    background: #e4e4e4;
+    width: 75%;
+    height: auto;
+}
+.premium li {
+    list-style-type: none;
+    padding: 1.2em;
+    font-size: 1.5em
+}
+.premium p, li {
+    padding: 1.1em;
+}
+.premium img {
+    width: 79%;
+    
+}
+
+.premium button {
+    width: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding:  1.2em;
+    background: #eb4949;
+    border-radius: 10px ;
+    font-size: 1.1em;
+}
+/* Planos estilização  */ 
+
+/*Sessao css para comentários*/
+#comentarios {
+    margin-top: 0;
+    width: 80%;
+    height: 600px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+.coments img{
+    width: 20%;
+    height: 90%;
+}
+.coment-1 {
+    width: 100%;
+    display: grid;
+    margin-bottom: 0.9em;
+}
+.dataComentario {
+    margin-bottom: 1em;
+}
+
+.grid-1 {
+    grid-template-areas:
+        "img comentarioUsuario comentarioUsuario"
+        "img comentarioUsuario comentarioUsuario"
+        "nomeUsuario comentarioUsuario comentarioUsuario"
+        "dataComentario comentarioUsuario comentarioUsuario"
+        ;
+}
+.botao {
+    width: 70%;
+    height: 40%;
+    text-align: center;
+}
+.coments button {
+    margin: 0;
+    border-radius: 1em;
+    width: 30%;
+    height: 50%;
+}
+.coments input {
+    margin-top: -90%;
+    border-radius: 0.8em;
+    height: 1.7em;
+    width: 100%;
+}
+.cad-coment {
+    width: 100%;
+    height: 60%;
+    display: grid;
+    margin-top: 1.2em;
+}
+.cad-coment img {
+    width: 100%;
+    height: 80%;
+}
+.grid-3 {
+    grid-template-areas:
+    "img coment"
+    "user coment" ;
+    grid-template-columns: 14% 80%;
+    grid-template-rows: 100px 25px;
+    grid-gap: 40px;
+}
+.user {
+    grid-area: user;
+}
+.coment{
+    grid-area: coment;
+}
+.img {
+    grid-area: img;
+}
+.coment {
+    width: 100%;
+    height: 60%;
+    border-radius: 1em;
+    background-color: rgba(123, 171, 235, 0.856); 
+}
+.coments {
+    width: 60%;
+    height: 30%;
+}
+.section-cad-coment {
+    display: flex;
+    width: 100%;
+}
+textarea {
+    padding: 5px;
+}
+/*Fim sessao css para comentários*/
+#sobre {
+    margin-top: -10%; 
+    width: 100%;
+    height: auto;
+    /* display: flex; */
+    
+}
+#sobre h2 {
+    width: 100%;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 2%;
+    text-align: left;
+    padding: 3em 3em 1em 3em;
+}
+#sobre p {
+    width: 90%; 
+    padding: 1.2em; 
+    font-size: 1.2em;
+    word-wrap: break-word;
+     
+}
+#sobre a {
+    font-size: 1.2em;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-top: -2%;
+    margin-left: 3%;
+    padding: 1.2em;
+    font-size: 90%;
+    max-height: 400px;
+
+}
+#sobre img {
+    width: 20%;
+    /* float: right; */
+    padding: 1em;
+    margin: -8% 8%;
+}
+.container-sobre {
+    width: 100%;
+    margin-left: 24px;
+}
+.container-sobre a {
+     margin: 6%;
+}
+
+
+#rodapé {
+    background: cornflowerblue;
+    padding: 1.3em;
+    width: 100%;
+    margin-top: 6%;
+
+}
+.rodape-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 9%;
+}
+#rodapé h3 {
+    font-size: 1.7em;
+    padding: 1.em;
+    margin-bottom: 10px;
+
+}
+#rodapé ul {
+    list-style-type: none;
+}
+@media screen and (max-width: 760px) {
+    .banner {
+        height: 400px;
+     }
+     .menu {
+        display: flex;
+        width: 100%;
+        height: 10%;
+        padding: 1.2em;
+        justify-content: flex-end;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    .menu ul {
+       display: flex;
+    }
+    .menu ul li{
+        font-size: 1.2em;
+        list-style-type: none;
+        padding-right: 8px;
+    }
+    
+    .banner nav {
+       font-size: 0.8em;
+    }
+    .topico-img img{
+        width: 160%;
+        height: 70%;
+        margin-right: 5%;
+        margin-top: 70%;
+    }
+    .topicos {
+        font-size: 0.65em;
+    }
+    #funcionalidades{
+        height: 360px;
+    }
+    .topico p {
+        -webkit-margin-before: -2em;
+        -webkit-margin-after: 3em;
+    }
+    .topico-container{
+        width: 100%;
+    }
+    .planos-container{
+        width: 90%;
+    }
+    .free {
+        width: 90%;
+        height: 480px;
+    }
+    .free li {
+        font-size: 1.2em;
+        
+    }
+    .free p {
+        height: 220px;
+        font-size: 0.81em
+    }
+    .free button {
+        height: 10%;
+        margin-top: 28px;   
+        font-size: 0.8em;
+    }
+    .pago {
+        width: 90%;
+        height: 480px;
+    }
+    .pago li {
+        font-size: 1.2em;
+        
+    }
+    .pago p {
+        height: 220px;
+        font-size: 0.81em
+    }
+    .pago button {
+        height: 10%;
+        margin-top: 28px;   
+        font-size: 0.8em;
+    }
+    .premium {
+        width: 90%;
+        height: 480px;
+    }
+    .premium li {
+        font-size: 1.2em;
+        
+    }
+    .premium p {
+        height: 220px;
+        font-size: 0.81em
+    }
+    .premium button {
+        height: 10%;
+        margin-top: 28px;   
+        font-size: 0.8em;
+    }
+    .coments img{
+        width: 40%;
+        height: 90%;
+    }
+    .coment-1 {
+        width: 100%;
+        display: grid;
+        margin-bottom: 0.9em;
+    }
+    .coment {
+        width: 130%;
+        height: 60%;
+        border-radius: 1em;
+        background-color: rgba(123, 171, 235, 0.856); 
+    }
+    .cad-coment img{
+        width: 165%;
+        margin-left: -60%;
+    }
+    .coments button {
+        margin: 0;
+        border-radius: 1em;
+        width: 30%;
+        height: 50%;
+    }
+    .coments input {
+        margin-top: -200%;
+        border-radius: 0.8em;
+        height: 30px;
+        width: 120%;
+    }
+    .coments {
+        width: 60%;
+        height: 30%;
+    }
+    
+    #sobre{
+        margin-top: -20%;
+    }
+    .container-sobre h2 {
+        font-size: 1em;
+    }
+    #sobre p {
+        word-wrap: break-word;
+        font-size: 0.8em
+    }
+    #sobre img {
+        width: 120%;
+    }
+    .container-sobre a {
+        font-size: 0.8em;
+        margin-left: 7%;
+    }
+        .rodape-container{
+            font-size: 0.8em;
+        }
+}
+@media screen and (max-width:480px) {
+    .menu {
+        display: flex;
+        width: 100%;
+        height: 10%;
+        padding: 1.1em;
+        justify-content: flex-end;
+        background-color: rgba(100, 89, 255, 0.151);
+    }
+    .menu ul {
+       display: flex;
+    }
+    .menu ul li{
+        font-size: 1em;
+        list-style-type: none;
+        padding-right: 8px;
+    }
+    .banner {
+        height: 300px;
+    }
+    h2 {
+        font-size: 0.9em;
+    }
+    #funcionalidades {
+        height: 250px;
+    }
+    .topico-img img{
+        width: 200%;
+        height: 70%;
+        margin-right: 3%;
+        margin-top: 100%;
+    }
+    .topicos {
+        margin-top: 0%;
+        margin-left: 10%;
+        font-size: 0.5em;
+        width: 100%;
+    }
+    .topicos p {
+        -webkit-margin-after: 2em;
+        margin-top: 2%;
+    }
+    .planos-container {
+        width: 95%
+    }
+    .free {
+        width: 90%;
+        height: 340px;
+    }
+    .free li {
+        font-size: 1.1em;
+        margin-top: 4%;
+        padding: 0;
+    }
+    .free p {
+        margin-top: 0;
+        height: 170px;
+        font-size: 0.6em
+    }
+    .free button {
+        height: 10%;
+        margin-top: 28px;   
+        font-size: 0.7em;
+    }
+    .pago {
+        width: 90%;
+        height: 340px;
+    }
+    .pago li {
+        font-size: 1.4  em;
+        margin-top: 0%;
+        padding: 0;
+    }
+    .pago p {
+        margin-top: 0;
+        height: 170px;
+        font-size: 0.6em;
+    }
+    .pago button {
+        height: 10%;
+        margin-top: 28px;   
+        font-size: 0.7em;
+    }
+    .premium {
+        width: 90%;
+        height: 340px;
+    }
+    .premium li {
+        font-size: 1.1em;
+        margin-top: 4%;
+        padding: 0;
+    }
+    .premium p {
+        margin-top: 0;
+        height: 170px;
+        font-size: 0.6em
+    }
+    .premium button {
+        height: 10%;
+        margin-top: 28px;   
+        font-size: 0.7em;
+    }
+    .coments h3{
+        font-size: 0.8em;
+    }
+    .cad-coment{
+        width: 100%;
+    }
+    .coment-1 p {
+        font-size: 0.8em;
+    }
+
+    .botao {
+        width: 100%;
+        height: 35%;
+    }
+    .botao button {
+        font-size: 0.6em;
+    }
+    .cad-coment img {
+        width: 250%;
+        height: 80%;
+        margin-left: -150%;
+    }
+    .cad-coment input {
+        margin-top: -300%;
+        width: 240%;
+        height: 30px;
+    }
+    .coment{
+        width: 130%;
+        height: 50%;
+    }
+    #sobre {
+        margin-top: -50%;
+        font-size: 0.65em;
+    }
+    .conteudo p {
+        width: 20;
+        
+}
+     }
+    
+    .container-sobre h2 {
+        font-size: 0.8em;
+ 
+    }
+    #sobre img {
+        width: 140%;
+    }
+    .container-sobre a {
+        font-size: 0.65em;
+        margin-left: 8%;
+    }
+        .rodape-container{
+            font-size: 0.65em;
+        }
+        #rodapé h3 {
+            font-size: 1em
+        }

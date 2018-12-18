@@ -1,9 +1,9 @@
 @using Senai.OO.ProjetoFinal.Models;
 @using Microsoft.AspNetCore.Http;
 @{
+    Layout= "MasterPage";
 List<ComentarioModel> comentarios = ViewData["Comentarios"] as List<ComentarioModel>;
         }
-        @ViewBag.Mensagem
         <!DOCTYPE html>
         <html></html>
         <head>
@@ -15,44 +15,7 @@ List<ComentarioModel> comentarios = ViewData["Comentarios"] as List<ComentarioMo
             <script src="main.js"></script>
         </head>
         <body>
-            <header>
-                <div class="container">
-                    <div class="banner">
-                        <nav class="menu">
-                            <ul>
-                                <li>
-                                    <a>@Html.ActionLink("Sobre Nós", "sobre", "Comentario")</a>
-                                </li>
-                                <li>
-                                    <a>@Html.ActionLink("Contato", "Contato", "Comentario")</a>
-                                </li>
-                                <li>
-                                    <a>@Html.ActionLink("Suporte", "perguntas", "Comentario")</a>
-                                </li>
-                                <li>
-                                    <a>@Html.ActionLink("Home", "index", "Comentario")</a>
-                                </li>
-                                @if (string.IsNullOrEmpty (HttpContext.Session.GetString ("idUsuario"))) {
-                                <li>
-                                    <a>@Html.ActionLink("Cadastrar", "Cadastrar", "Usuario")</a>
-                                </li>
-                                <li>
-                                    <a>@Html.ActionLink("Login", "FazerLogin", "Usuario")</a>
-                                </li>
-                                } else{
-                                <li>
-                                    <a>@Html.ActionLink("Sair", "FazerLogin", "Usuario")</a>
-                                </li>
-                                }
-                            </ul>
-                        </nav>
-                        <div class="banner-opacity">
-                            <div class="logo">
-                                <img src="./img/logo.svg" alt="Logo checkpoint">
-                            </div>
-                        </div>
-                    </div>
-            </header>
+        @ViewBag.Mensagem
             <main>
                 <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
                 <div class="container-titulo">
@@ -150,7 +113,7 @@ List<ComentarioModel> comentarios = ViewData["Comentarios"] as List<ComentarioMo
                         }
                         <div class="botao"><button>Exibir mais</button></div>
                         <h3>Nos dê sua opinião sobre os nossos produtos!</h3>
-                        @if(!string.IsNullOrEmpty (HttpContext.Session.GetString ("idUsuario"))) {
+                
                         <div class="section-cad-coment">
                             <div class="cad-coment grid-3">
                                 <img src="./img/Foto de perfil.jfif" class="item img">
@@ -159,7 +122,7 @@ List<ComentarioModel> comentarios = ViewData["Comentarios"] as List<ComentarioMo
                                 <input type="submit" value="Enviar">
                             </div>
                         </div>
-                        }
+                        
                     </div>
                 </form>
                 <section id="sobre">

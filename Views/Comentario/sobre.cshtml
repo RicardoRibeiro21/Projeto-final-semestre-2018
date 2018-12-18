@@ -1,5 +1,6 @@
 @using Senai.OO.ProjetoFinal.Models;
 @{
+    Layout="MasterPage"
     List<ComentarioModel> comentarios = ViewData["Comentarios"] as List<ComentarioModel>;
 }
 <!DOCTYPE html>
@@ -15,39 +16,7 @@
 </head>
 
 <body>
-  <header>
-        <div class="container">
-            <div class="banner">
-                <nav class="menu">
-                    <ul>
-                        <li>
-                            <a>@Html.ActionLink("Sobre Nós", "sobre", "Comentario")</a>
-                        </li>
-                        <li>
-                            <a>@Html.ActionLink("Contato", "Contato", "Comentario")</a>
-                        </li>
-                        <li>
-                            <a>@Html.ActionLink("Suporte", "perguntas", "Comentario")</a>
-                        </li>
-                        <li>
-                            <a >@Html.ActionLink("Home", "index", "Comentario")</a>
-                        </li>
-                          <li>
-                            <a >@Html.ActionLink("Cadastrar", "Cadastrar", "Usuario")</a>
-                        </li>
-                        <li>
-                            <a >@Html.ActionLink("Login", "FazerLogin", "Usuario")</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="banner-opacity">
-                    <div class="logo">
-                        <img src="/img/logo.svg" alt="Logo checkpoint">
-                    </div>
-                </div>
-            </div>
-
-    </header>
+ @ViewBag.Mensagem
     <main>
         <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
         <section id="Sobre">

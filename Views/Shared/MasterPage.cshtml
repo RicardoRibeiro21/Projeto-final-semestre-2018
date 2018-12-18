@@ -1,0 +1,35 @@
+  <body>
+        <header>
+                <div class="container">
+                    <div class="banner">
+                        <nav class="menu">
+                            <ul>
+                                <li>
+                                    <a>@Html.ActionLink("Sobre Nós", "sobre", "Comentario")</a>
+                                </li>
+                                <li>
+                                    <a>@Html.ActionLink("Contato", "Contato", "Comentario")</a>
+                                </li>
+                                <li>
+                                    <a>@Html.ActionLink("Suporte", "perguntas", "Comentario")</a>
+                                </li>
+                                <li>
+                                    <a>@Html.ActionLink("Home", "index", "Comentario")</a>
+                                </li>
+                                    <a>@Html.ActionLink("Cadastrar", "Cadastrar", "Usuario")</a>
+                                </li>
+                                <li>
+                                    <a>@Html.ActionLink("Login", "FazerLogin", "Usuario")</a>
+                                </li>
+            
+                            </ul>
+                        </nav>
+                        <div class="banner-opacity">
+                            <div class="logo">
+                                <img src="./img/logo.svg" alt="Logo checkpoint">
+                            </div>
+                        </div>
+                    </div>
+            </header>
+            @RenderBody()
+            </body>

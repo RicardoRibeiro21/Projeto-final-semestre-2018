@@ -1,0 +1,309 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+h2 {
+    text-align: center;
+    padding: 2.6em;
+    width: 100%;
+    height: 20%;
+}
+a {
+    color: black;
+}
+a:link {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+a:hover{
+    transition: 0.35s;
+    color: rgba(55, 55, 221, 0.884);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+h2 {
+    text-align: center;
+    padding: 2.6em;
+    width: 100%;
+    height: 20%;
+}
+a {
+    color: black;
+}
+a:link {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+a:hover{
+    transition: 0.35s;
+    color: rgba(55, 55, 221, 0.884);
+}
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.banner {
+    justify-content: center;
+    width: 100%;
+    height: 646px;
+    background-image: url("./team.jpg");
+    background-size: 100%;
+}
+.banner-opacity {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+  
+}
+.logo {
+    width: 100%;
+    height: 55%;
+    transform: scale(0.2);
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    padding: 1.2em;
+    justify-content: flex-end;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.menu ul {
+   display: flex;
+}
+.menu ul li{
+    font-size: 1.5em;
+    list-style-type: none;
+    padding-right: 20px;
+}
+#contato{ 
+    background-color: #c2c2c249;
+    width: 100%;
+    height: 640px; 
+}
+.form {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 40% 40%;
+    grid-auto-rows: 50px 50px 50px 140px;
+    grid-gap: 12px;
+    grid-column-start: 40%;
+    width: 100%;
+}
+.form input, textarea {
+    border-radius: 10px;
+    background-color: #aba6f038;
+    color: black;
+    resize: none;
+}
+.box3 button {
+    height: 120%;
+}
+.box2 {
+    width: 202%
+}
+
+#contato button {
+    width: 10%;
+    margin: 2% 10%;
+    border-radius: 4px;
+}
+
+a {
+    color: black;
+}
+a:link {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+a:hover{
+    transition: 0.35s;
+    color: rgba(55, 55, 221, 0.884);
+}
+.empresa img {
+    max-width: 200px;
+}
+.empresa {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+.empresa ul{
+    display: flex;
+    width: 70%;
+}
+.empresa ul li {
+    list-style-type: none;
+    text-align: center;
+    width: 40%;
+}
+.endereco{
+    height: 400px;
+    width: 100%;
+    margin-right: 0;
+
+}
+.endereco iframe {
+    margin-top: 14%;
+    margin-left: 30%;
+    width: 40%;
+    height: 70%;
+}
+.endereco p {
+    margin-left: 30%;
+    margin-top: 4%;
+}
+#rodapé {
+    background: cornflowerblue;
+    padding: 1.3em;
+    width: 100%;
+    margin-top: 20%;
+}
+.rodape-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 9%;
+}
+#rodapé h3 {
+    font-size: 0.9em;
+    padding: 1.1em;
+}
+#rodapé ul {
+    list-style-type: none;
+}
+@media screen and (max-width: 760px) {
+    .banner {
+        height: 400px;
+     }
+     .menu {
+        display: flex;
+        width: 100%;
+        height: 10%;
+        padding: 1.2em;
+        justify-content: flex-end;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+    .menu ul {
+       display: flex;
+    }
+    .menu ul li{
+        font-size: 1.2em;
+        list-style-type: none;
+        padding-right: 8px;
+    }
+        .banner nav {
+            font-size: 0.8em;
+        }
+        .empresa {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .empresa img {
+            width: 65%;
+        }
+        .empresa ul{
+            margin-right: 5%;
+            display: flex;
+            width: 80%;
+        }
+        p {
+            font-size: 0.8em;
+        }
+        a{
+            font-size: 0.8em;
+        }
+        .empresa ul li {
+            list-style-type: none;
+            text-align: center;
+            width: 40%;
+        }
+        .endereco{
+            margin-top: -10%
+        }
+        .endereco p {
+            margin-left: 22%;
+        }
+
+        .rodape-container{
+            font-size: 0.8em;
+        }
+        #rodapé{
+            margin-top: 15%
+        }
+}
+@media screen and (max-width:480px) {
+    .menu {
+        display: flex;
+        width: 100%;
+        height: 8%;
+        padding: 1.1em;
+        justify-content: flex-end;
+        background-color:  rgba(255, 255, 255, 0.61); 
+    }
+    .menu ul {
+       display: flex;
+    }
+    .menu ul li{
+        font-size: 1em;
+        list-style-type: none;
+        padding-right: 8px;
+    }
+    .banner {
+        height: 300px;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+    .form {
+        margin-top: -15%;
+    }
+
+    .empresa{
+        margin-left: 25%;
+        width: 100%;
+        display: flex;
+    }
+.empresa ul{
+    display: block;
+}
+.empresa p {
+    font-size: 0.65em;
+}
+.endereco{
+    margin-top: 20%;
+}
+.endereco iframe {
+    width: 80%;
+    margin-left: 7%;
+}
+.endereco p {
+    margin-left: 10%
+}
+
+.rodape-container{
+    font-size: 0.65em;
+}
+#rodapé h3 {
+    font-size: 1em
+}
+}

@@ -73,5 +73,9 @@ namespace Senai.OO.ProjetoFinal.Controllers {
             ViewBag.Mensagem = "Usuário inválido";
             return View ();
         }
+        public IActionResult Sair(){
+            HttpContext.Session.Clear();
+            return RedirectToAction("index");
+        }
     }
 }

@@ -18,3 +18,13 @@ C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-201
 C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\obj\Debug\netcoreapp2.1\Senai.OO.ProjetoFinal.RazorTargetAssemblyInfo.cs
 C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\obj\Debug\netcoreapp2.1\Senai.OO.ProjetoFinal.dll
 C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\obj\Debug\netcoreapp2.1\Senai.OO.ProjetoFinal.pdb
+C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\bin\Debug\netcoreapp2.1\Senai.OO.ProjetoFinal.deps.json
+C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\bin\Debug\netcoreapp2.1\Senai.OO.ProjetoFinal.runtimeconfig.json
+C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\bin\Debug\netcoreapp2.1\Senai.OO.ProjetoFinal.runtimeconfig.dev.json
+C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\bin\Debug\netcoreapp2.1\Senai.OO.ProjetoFinal.dll
+C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\bin\Debug\netcoreapp2.1\Senai.OO.ProjetoFinal.pdb
+C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\bin\Debug\netcoreapp2.1\Senai.OO.ProjetoFinal.Views.dll
+C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\bin\Debug\netcoreapp2.1\Senai.OO.ProjetoFinal.Views.pdb
+C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\obj\Debug\netcoreapp2.1\Senai.OO.ProjetoFinal.Views.pdb
+C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\obj\Debug\netcoreapp2.1\Senai.OO.ProjetoFinal.csproj.CopyComplete
+C:\Users\47575406808\Desktop\C#\Senai.OO.ProjetoFinal\Projeto-final-semestre-2018\obj\Debug\netcoreapp2.1\Razor\Views\Shared\MasterPage.g.cshtml.cs
